@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>故事集 · 焚烬纪元</title>
+  <link rel="stylesheet" href="css/story.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 粒子背景 -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- 导航 -->
+  <nav id="main-nav">
+    <div class="nav-logo"><a href="index.html">焚烬纪元</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">首页</a></li>
+      <li><a href="debate.html">辩论实录</a></li>
+      <li><a href="stories.html" class="active">故事集</a></li>
+      <li><a href="treaty.html">金山条约</a></li>
+    </ul>
+    <div class="nav-era">神弃时代 · 故事集</div>
+  </nav>
+
+  <div id="progress-bar"></div>
+  <div class="sb-badge">STORIES · 目录</div>
+
+  <!-- 英雄区 -->
+  <section id="stories-hero">
+    <div class="sh-content">
+      <div class="sh-meta">
+        <span class="sh-tag">STORIES</span>
+        <span class="sh-date">神弃时代 · 故事集</span>
+      </div>
+      <h1 class="sh-title">
+        <span class="sh-line-main">故事集</span>
+        <span class="sh-line-sub">焚烬纪元叙事档案</span>
+      </h1>
+      <div class="sh-divider"></div>
+      <p class="sh-desc">在神弃时代的废墟之上，普通人与大人物共同书写着文明的注脚。<br/>他们的选择，定义了这个时代。</p>
+    </div>
+  </section>
+
+  <!-- 故事列表 -->
+  <section id="stories-list">
+    <div class="sl-inner">
+
+      <!-- 故事卡片 001：辩论实录 -->
+      <a href="debate.html" class="sl-card sl-card-available">
+        <div class="slc-status">
+          <span class="slc-badge">可读</span>
+        </div>
+        <div class="slc-number">001</div>
+        <div class="slc-visual">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a1207" />
+                <stop offset="100%" stop-color="#0a1628" />
+              </linearGradient>
+            </defs>
+            <rect width="120" height="80" rx="4" fill="url(#cardGrad1)" />
+            <!-- 辩论桌 -->
+            <line x1="20" y1="55" x2="100" y2="55" stroke="#c9a87c" stroke-width="0.8" opacity="0.4" />
+            <circle cx="45" cy="45" r="8" fill="none" stroke="#c9a87c" stroke-width="1" opacity="0.5" />
+            <circle cx="75" cy="45" r="8" fill="none" stroke="#5b8abf" stroke-width="1" opacity="0.5" />
+            <!-- VS -->
+            <text x="60" y="48" text-anchor="middle" fill="#888" font-size="8" opacity="0.5">VS</text>
+          </svg>
+        </div>
+        <div class="slc-info">
+          <h3 class="slc-title">辩论实录</h3>
+          <p class="slc-subtitle">荣耀与生命，孰为文明之基石？</p>
+          <div class="slc-meta">
+            <span class="slc-characters">韩沙·字铁钧 VS 威廉·阿什顿</span>
+            <span class="slc-location">地点：日内瓦 · 欧罗巴联盟总秘书处</span>
+          </div>
+          <p class="slc-excerpt">"诸位，我来自一个以战火为养分的国度。在我的帝国，日月从不落下，不是因为自然眷顾，而是因为三十四亿汉人用血脉、钢铁与意志，将天穹生生托起。"</p>
+          <div class="slc-tags">
+            <span class="slc-tag">辩论</span>
+            <span class="slc-tag">哲学</span>
+            <span class="slc-tag">大明-欧罗巴</span>
+          </div>
+        </div>
+        <div class="slc-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <!-- 故事卡片 002：金山条约 -->
+      <a href="treaty.html" class="sl-card sl-card-available">
+        <div class="slc-status">
+          <span class="slc-badge">可读</span>
+        </div>
+        <div class="slc-number">002</div>
+        <div class="slc-visual">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a1020" />
+                <stop offset="100%" stop-color="#0a0a18" />
+              </linearGradient>
+            </defs>
+            <rect width="120" height="80" rx="4" fill="url(#cardGrad2)" />
+            <!-- 日月纹章 -->
+            <circle cx="60" cy="35" r="18" fill="none" stroke="#c9a87c" stroke-width="1" opacity="0.5" />
+            <path d="M60 17 A18 18 0 0 1 60 53" fill="#c9a87c" opacity="0.15" />
+            <!-- 笔 -->
+            <line x1="85" y1="25" x2="90" y2="55" stroke="#c9a87c" stroke-width="1.2" opacity="0.5" />
+            <path d="M83,22 Q90,18 93,22" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.4" />
+          </svg>
+        </div>
+        <div class="slc-info">
+          <h3 class="slc-title">金山条约</h3>
+          <p class="slc-subtitle">血月下的交割</p>
+          <div class="slc-meta">
+            <span class="slc-characters">韩沙·字铁钧 · 威廉·阿什顿</span>
+            <span class="slc-location">地点：金山省行政府 · 崇日殿</span>
+          </div>
+          <p class="slc-excerpt">"笔尖悬在签名栏上方三寸，停顿。他抬起头，看向韩沙。'韩沙上校。'韩沙立正。'三天前，我说生命所求，不过是一片属于自己的海。'他的声音很轻，像在自言自语。'现在我把三个州的海，交给你们。'笔落下。"</p>
+          <div class="slc-tags">
+            <span class="slc-tag">条约</span>
+            <span class="slc-tag">政治</span>
+            <span class="slc-tag">大明-欧罗巴</span>
+          </div>
+        </div>
+        <div class="slc-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <!-- 故事卡片 003：丙戌柒叁玖 -->
+      <a href="worker739.html" class="sl-card sl-card-available">
+        <div class="slc-status">
+          <span class="slc-badge">可读</span>
+        </div>
+        <div class="slc-number">003</div>
+        <div class="slc-visual">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0a0a14" />
+                <stop offset="100%" stop-color="#05050a" />
+              </linearGradient>
+            </defs>
+            <rect width="120" height="80" rx="4" fill="url(#cardGrad3)" />
+            <!-- 靛蓝釜 -->
+            <rect x="35" y="15" width="50" height="50" rx="3" fill="none" stroke="#4a5a7a" stroke-width="1" opacity="0.5"/>
+            <circle cx="60" cy="40" r="12" fill="none" stroke="#4a5a7a" stroke-width="0.6" opacity="0.4"/>
+            <circle cx="60" cy="40" r="5" fill="none" stroke="#4a5a7a" stroke-width="0.5" opacity="0.3"/>
+            <!-- 编号 -->
+            <text x="60" y="76" text-anchor="middle" fill="#4a5a7a" font-size="7" opacity="0.4">273-14-739</text>
+          </svg>
+        </div>
+        <div class="slc-info">
+          <h3 class="slc-title">丙戌柒叁玖</h3>
+          <p class="slc-subtitle">一个十三区人的一生</p>
+          <div class="slc-meta">
+            <span class="slc-characters">丙戌柒叁玖 · 丙戌陆壹贰 · 秦教官</span>
+            <span class="slc-location">地点：第十三区 · 染料车间 · 靛蓝釜</span>
+          </div>
+          <p class="slc-excerpt">"他没有名字。帝国人口署的文书在登记表里写下'丙戌柒叁玖'时，窗外的永昼仪刚刚切换至夜间色温。血红色的光芒透过油纸糊的窗格，在登记台上投下细长的、渐渐拉斜的阴影。"</p>
+          <div class="slc-tags">
+            <span class="slc-tag">十三区</span>
+            <span class="slc-tag">工人</span>
+            <span class="slc-tag">鲸歌</span>
+            <span class="slc-tag">帆鳍鲷</span>
+          </div>
+        </div>
+        <div class="slc-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <!-- 故事卡片 004：占位 -->
+      <div class="sl-card sl-card-coming">
+        <div class="slc-status">
+          <span class="slc-badge slc-badge-coming">筹备中</span>
+        </div>
+        <div class="slc-number">004</div>
+        <div class="slc-visual slc-visual-placeholder">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="80" rx="4" fill="#0a0a14" />
+            <text x="60" y="42" text-anchor="middle" fill="#333" font-size="24" font-family="Noto Serif SC">?</text>
+            <text x="60" y="60" text-anchor="middle" fill="#444" font-size="8" letter-spacing="3">COMING SOON</text>
+          </svg>
+        </div>
+        <div class="slc-info">
+          <h3 class="slc-title slc-title-dim">故事004</h3>
+          <p class="slc-subtitle slc-subtitle-dim">（筹备中…）</p>
+          <div class="slc-meta">
+            <span class="slc-characters">待定</span>
+            <span class="slc-location">待定</span>
+          </div>
+          <p class="slc-excerpt slc-excerpt-dim">新的故事将在世界观持续扩展中逐步解锁。如果你有想探索的角色或事件，欢迎提出。</p>
+        </div>
+      </div>
+
+      <!-- 人物索引（微型） -->
+      <div class="sl-character-index">
+        <h3 class="sci-title">已登场人物</h3>
+        <div class="sci-grid">
+          <div class="sci-card">
+            <div class="sci-avatar sci-avatar-ming">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="22" fill="#1a1207" stroke="#c9a87c" stroke-width="1" opacity="0.5"/>
+                <circle cx="24" cy="20" r="8" fill="none" stroke="#c9a87c" stroke-width="1"/>
+                <path d="M16,32 Q24,26 32,32" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="sci-name">韩沙·字铁钧</div>
+            <div class="sci-role">天启大明帝国 · 靖神卫戍军上校</div>
+            <div class="sci-appears">登场于：辩论实录 / 金山条约</div>
+          </div>
+          <div class="sci-card">
+            <div class="sci-avatar sci-avatar-europa">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="22" fill="#0a1628" stroke="#5b8abf" stroke-width="1" opacity="0.5"/>
+                <circle cx="24" cy="20" r="8" fill="none" stroke="#5b8abf" stroke-width="1"/>
+                <path d="M16,32 Q24,26 32,32" fill="none" stroke="#5b8abf" stroke-width="0.8" opacity="0.5"/>
+                <path d="M20,36 L24,44 L28,36 Z" fill="none" stroke="#5b8abf" stroke-width="0.6" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="sci-name">威廉·阿什顿</div>
+            <div class="sci-role">欧罗巴诸国联盟 · 下议院议员</div>
+            <div class="sci-appears">登场于：辩论实录 / 金山条约</div>
+          </div>
+          <div class="sci-card">
+            <div class="sci-avatar sci-avatar-ming">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="22" fill="#1a1207" stroke="#c9a87c" stroke-width="1" opacity="0.4"/>
+                <text x="24" y="28" text-anchor="middle" fill="#c9a87c" font-size="11" opacity="0.5">✞</text>
+              </svg>
+            </div>
+            <div class="sci-name">安娜·施密特</div>
+            <div class="sci-role">欧罗巴联盟 · "净化者"中尉（已故）</div>
+            <div class="sci-appears">提及于：辩论实录 / 金山条约</div>
+          </div>
+          <div class="sci-card">
+            <div class="sci-avatar sci-avatar-ming">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="22" fill="#1a1207" stroke="#c9a87c" stroke-width="1" opacity="0.4"/>
+                <text x="24" y="28" text-anchor="middle" fill="#c9a87c" font-size="10" opacity="0.4">☨</text>
+              </svg>
+            </div>
+            <div class="sci-name">李经述</div>
+            <div class="sci-role">天启大明帝国 · 殖民事务总长</div>
+            <div class="sci-appears">登场于：金山条约</div>
+          </div>
+          <div class="sci-card">
+            <div class="sci-avatar" style="opacity:0.5">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="22" fill="#0a0a14" stroke="#4a5a7a" stroke-width="1"/>
+                <text x="24" y="28" text-anchor="middle" fill="#4a5a7a" font-size="14" opacity="0.6">工</text>
+              </svg>
+            </div>
+            <div class="sci-name">丙戌柒叁玖</div>
+            <div class="sci-role">第十三区 · 染料车间二级技工（已故）</div>
+            <div class="sci-appears">登场于：丙戌柒叁玖</div>
+          </div>
+          <div class="sci-card">
+            <div class="sci-avatar" style="opacity:0.5">
+              <svg viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="22" fill="#0a0a14" stroke="#5b8abf" stroke-width="1" opacity="0.4"/>
+                <text x="24" y="28" text-anchor="middle" fill="#5b8abf" font-size="10" opacity="0.4">秦</text>
+              </svg>
+            </div>
+            <div class="sci-name">秦教官</div>
+            <div class="sci-role">天工院 · 格物科</div>
+            <div class="sci-appears">登场于：丙戌柒叁玖</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer id="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><a href="index.html">焚烬纪元</a></div>
+      <div class="footer-tagline">神弃时代 · 故事集</div>
+      <div class="footer-links">
+        <a href="index.html">返回首页</a>
+        <a href="debate.html">辩论实录</a>
+        <a href="treaty.html">金山条约</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/story.js"></script>
+</body>
+</html>

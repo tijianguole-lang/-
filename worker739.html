@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>丙戌柒叁玖 · 焚烬纪元</title>
+  <link rel="stylesheet" href="css/story.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+  <nav id="main-nav">
+    <div class="nav-logo"><a href="index.html">焚烬纪元</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">首页</a></li>
+      <li><a href="debate.html">辩论实录</a></li>
+      <li><a href="treaty.html">金山条约</a></li>
+      <li><a href="stories.html">故事集</a></li>
+    </ul>
+    <div class="nav-era">神弃时代 · 新历231-274年</div>
+  </nav>
+
+  <div id="progress-bar"></div>
+  <div class="sb-badge">编号273-14-739</div>
+
+  <!-- 英雄区 -->
+  <section id="story-hero">
+    <div class="sh-overlay"></div>
+    <div class="sh-content">
+      <div class="sh-meta">
+        <span class="sh-tag">STORY · 003</span>
+        <span class="sh-date">新历231年 — 新历274年</span>
+      </div>
+      <h1 class="sh-title">
+        <span class="sh-line-main" style="font-size: 48px; letter-spacing: 4px;">丙戌柒叁玖</span>
+        <span class="sh-line-sub">一个十三区人的一生</span>
+      </h1>
+      <div class="sh-divider"></div>
+      <p class="sh-desc">帝国人口署金山省第十四登记站 · 编号273-14-739<br/>在岗三十一年零三百一十四天 · 缺勤：零 · 违纪：零</p>
+      <div class="sh-timeline">
+        <button class="sht-dot active" data-target="birth" title="出生"><span class="sht-label">出生</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="childhood" title="童年"><span class="sht-label">童年</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="labor" title="劳动"><span class="sht-label">劳动</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="whalesong" title="鲸歌"><span class="sht-label">鲸歌</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="sickness" title="疫病"><span class="sht-label">疫病</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="mother" title="母亲"><span class="sht-label">母亲</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="naturalize" title="归化"><span class="sht-label">归化</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="retire" title="退休"><span class="sht-label">退休</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="death" title="死"><span class="sht-label">死</span></button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="after" title="鲸落之后"><span class="sht-label">鲸落</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文 -->
+  <article id="story-body">
+    <div class="sb-inner">
+
+      <!-- 一、出生 -->
+      <div class="sb-chapter" id="ch-birth">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 01</span>
+          <h2>出生</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-illustration">
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="birthSky" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#1a0505"/><stop offset="100%" stop-color="#0a0208"/>
+              </linearGradient>
+              <radialGradient id="bloodMoon" cx="50%" cy="30%" r="30%">
+                <stop offset="0%" stop-color="#8b0000" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#8b0000" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="800" height="300" fill="url(#birthSky)"/>
+            <rect width="800" height="300" fill="url(#bloodMoon)"/>
+            <!-- 人造月亮 -->
+            <circle cx="550" cy="80" r="45" fill="none" stroke="#8b2020" stroke-width="1.2" opacity="0.5"/>
+            <circle cx="550" cy="80" r="35" fill="#8b0000" opacity="0.12"/>
+            <!-- 棚屋 -->
+            <g transform="translate(200,160)" opacity="0.6">
+              <rect x="0" y="20" width="200" height="100" fill="none" stroke="#4a2020" stroke-width="0.8"/>
+              <rect x="20" y="30" width="60" height="80" fill="none" stroke="#4a2020" stroke-width="0.6"/>
+              <rect x="120" y="30" width="60" height="80" fill="none" stroke="#4a2020" stroke-width="0.6"/>
+              <!-- 油毡破洞 -->
+              <path d="M180,20 L200,40 L170,50 Z" fill="none" stroke="#4a2020" stroke-width="0.5" opacity="0.5"/>
+              <!-- 光柱 -->
+              <line x1="550" y1="80" x2="190" y2="40" stroke="#8b2020" stroke-width="0.3" opacity="0.15"/>
+            </g>
+            <!-- 文书剪影 -->
+            <g transform="translate(500,200)" opacity="0.35">
+              <rect x="0" y="0" width="12" height="40" fill="none" stroke="#4a2020" stroke-width="1"/>
+              <circle cx="6" cy="-8" r="8" fill="none" stroke="#4a2020" stroke-width="1"/>
+              <line x1="6" y1="0" x2="6" y2="20" stroke="#4a2020" stroke-width="0.6"/>
+            </g>
+            <text x="400" y="280" text-anchor="middle" fill="#6a3030" font-size="11" font-family="Noto Serif SC" opacity="0.3">第十三区 · 棚屋 · 新历231年霜月十七日</text>
+          </svg>
+        </div>
+        <div class="sbc-text">
+          <p class="sbc-opening">他没有名字。</p>
+          <p>帝国人口署金山省第十四登记站的文书，在"新生儿登记表·受庇之民"栏目里写下"丙戌柒叁玖"时，窗外的永昼仪刚刚切换至夜间色温。血红色的光芒透过油纸糊的窗格，在登记台上投下细长的、渐渐拉斜的阴影。</p>
+          <p>母亲躺在隔壁棚屋的草垫上，身下的粗麻布已被血浸透三次。接生的是同棚的一个老妇人，从前在岭南乡下给人接生过，如今眼睛半瞎，全靠摸。</p>
+          <p class="sbc-dialog">"男孩。"老妇人说。</p>
+          <p>母亲没有力气回应。她的目光越过老妇人肩头，落在棚屋顶那片漏风的油毡上。透过破洞，她看见人造的月亮正从天穹中央缓缓移过，暗红如一块凝固的血痂。</p>
+          <div class="sbc-document sbc-doc-mini">
+            <strong>帝国人口署 · 第十三区登记表（摘录）</strong><br/>
+            编号：273-14-739 · 性别：男 · 父系：阵亡 · 母系：丙戌陆壹贰，纺织局第三分厂，织工。<br/>
+            依据《十三区人口管理条例》第七条，阵亡者遗属可获额外口粮配额三十斤，分十二个月发放。
+          </div>
+          <p>他从公文包里取出一个拇指大的铁片，上面压印着一串数字：<strong>273-14-739</strong>。</p>
+          <p>"这是他的身份凭证。丢失不补，伪造处死。"</p>
+          <p>他把铁片放在草垫边缘，转身离开。母亲没有去拿那铁片。她只是侧过身，把婴儿干瘪的脸轻轻按在自己汗湿的胸口。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">◎</div>
+            窗外，永昼仪继续它永不停歇的轨迹。<br/>十三区没有昼夜，只有轮班。
+          </div>
+        </div>
+      </div>
+
+      <!-- 二、童年 -->
+      <div class="sb-chapter" id="ch-childhood">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 02</span>
+          <h2>童年</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>他是在蒸汽管道的阴影里学会走路的。</p>
+          <p>纺织局第三分厂的职工宿舍，是十三区标准制式：长三十米、宽八米、高两米七的砖木结构，一排通铺住六十人，男女分列，中间以一道薄木板墙相隔。每家没有隐私，只有一顶可悬挂的粗布幔帐。</p>
+          <p>母亲把帐帐挂在靠窗的位置——不是为看风景，窗外只有隔壁厂房的后墙和一根粗大的冷凝水排水管——是为了通风。夏天，厂房的热浪透过砖墙渗进来，室内温度比室外还高三度。母亲把他放在窗台上，后背贴着冰凉的铁皮水管，可以少长一些痱子。</p>
+          <p>他从窗台上学会了看人。</p>
+          <p>每天清晨五点四十分，汽笛准时拉响。母亲会在汽笛第一声时睁开眼睛，第三声时起身，第五声时已经走出棚屋。<strong>她从不回头。</strong></p>
+          <p>他后来知道，不是不想回，是不能回。回一次头，脚步就会慢三步；慢三步，就会错过班车；错过班车，就会缺勤；缺勤三次，当月口粮扣半。</p>
+          <div class="sbc-highlight">母亲从未缺勤。十七年，零缺勤。</div>
+          <p>他六岁那年，母亲带他去了一次"记忆场"——十三区边缘的一块空地，原先是帝国工部征用的堆料场，后来废弃，被居民们偷偷平整成一片可以坐人的地方。没有树，没有草，只有几块被风雨磨圆了棱角的混凝土墩。</p>
+          <p>母亲指着南边天际线——那里，永昼仪的光芒与远处海面的反光交汇成一道模糊的银线。</p>
+          <p class="sbc-dialog">"海。"母亲说。</p>
+          <p>他不知道海是什么。母亲没有解释。她在混凝土墩上坐下，把带来的半块玉米饼掰成两半，大的那半递给他。</p>
+          <p>"你爹就死在海里。"她说。</p>
+          <p>他第一次听说爹。</p>
+          <p>"帝国征的。南洋。船炸了，没有遗体。"她沉默很久。"帝国说他是殉国。给了抚恤。三十斤粗粮，分十二个月。"</p>
+          <p>她把手中的玉米饼撕成细条，却没有吃，只是慢慢碾成碎末，撒在脚下的泥土里。</p>
+          <p>"我不识字，不会写他的名字。登记站文书说，阵亡名单上，他叫<strong>'丙戌伍玖壹'</strong>。"</p>
+          <p>风从南边吹来，带着某种他从未闻过的、咸涩的潮湿气息。</p>
+          <p>"那是海风。"母亲说，"你爹说，海风里有盐，吹久了，脸会皴。"</p>
+          <p>她站起来，拍了拍身上的土。</p>
+          <p>"走吧。汽笛要响了。"</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">←</div>
+            那一年，母亲四十二岁，眼角已布满细密的皱纹，像帝国工部那些陈旧管道上纵横交错的焊痕。
+          </div>
+          <hr class="sbc-hr"/>
+          <p>他八岁时，第一次见到"清洁队"招工。招工告示贴在食堂门口，黄纸黑字，边缘已被雨水浸花。管事站在告示旁，手里拎着一根藤条，敲击着身边的铁桶。</p>
+          <p>"十三至二十岁，男性，身体健康。待遇：日供两餐，月发配给券五斤，表现优异者可转正。"</p>
+          <p>人群骚动。五斤配给券，相当于一个成年织工半个月的口粮。母亲按着他的肩，很用力。</p>
+          <p class="sbc-dialog">"不许去。"</p>
+          <p>他仰头看母亲。她的眼睛没有看他，只盯着告示上那个"死亡率23%"的小字附注——极淡的铅印，要凑很近才能看见。</p>
+          <p>"你爹死了。你不能再死。"</p>
+          <p>那是他第一次听见母亲说"死"这个字。</p>
+        </div>
+      </div>
+
+      <!-- 三、劳动 -->
+      <div class="sb-chapter" id="ch-labor">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 03</span>
+          <h2>劳动</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>他十三岁入厂。没有选择。十三区儿童年满十三岁必须登记就业岗位，无正当理由拒绝分配者，取消口粮资格。</p>
+          <p>母亲带他去了纺织局，负责分配的是个戴眼镜的中年文书，翻着名册头也不抬：</p>
+          <p>"丙戌柒叁玖。母亲是织工。按政策，可接续母业，也可申请其他岗位。目前缺岗：染料车间、铸造车间、蒸汽管道巡检科。"</p>
+          <p>母亲说："纺织。"</p>
+          <p>文书抬起眼皮看她一眼："纺织局招满了。"</p>
+          <p>"蒸汽管道呢？"母亲的声音很紧。</p>
+          <p>"死亡率19%。"</p>
+          <p>"……铸造呢？"</p>
+          <p>"23%。"</p>
+          <p>母亲沉默。文书放下笔，难得地多说了一句：</p>
+          <p>"染料车间，17%。但每天接触化学溶剂，女工四十五岁以后生育率下降87%，男工五十岁以后肝病发病率91%。"</p>
+          <p>他开口了。</p>
+          <p class="sbc-dialog">"染料车间。"</p>
+          <p>母亲转头看他。</p>
+          <p>他说："我爹死在23%里。19%和17%，哪个更低？"</p>
+          <p>文书说："17%。"</p>
+          <p>他说："那就染料车间。"</p>
+          <p>当天下午，他在登记表上按下手印。身份凭证上的编号旁边，多了一行小字：</p>
+          <div class="sbc-document sbc-doc-mini">
+            岗位：纺织局第七分厂·染料车间。入职日期：新历244年霜月十九日。预计工作年限：依健康状况续定。
+          </div>
+          <hr class="sbc-hr"/>
+          <p>染料车间在分厂最深处。车间没有窗户，空气从屋顶三台巨大的换气扇进出，常年弥漫着靛蓝、茜红、铬黄的粉尘。工人们戴着帝国配发的简易棉纱口罩——每三个月更换一次，但实际损耗周期是十七天——下班时擤出的鼻涕，红是红，蓝是蓝，黄是黄。</p>
+          <p>他负责靛蓝釜——一台三米高的圆柱形压力容器，内部温度恒定在85度，压力四个大气压。他的工作是每二十分钟取样一次，用长柄铜勺从釜底舀出少量染料液，滴在试纸上，与标准色卡比对。</p>
+          <p>标准色卡有十二级，从"月白"到"玄青"。他不需要识字，只需要记住每一级对应的颜色和编号。</p>
+          <p>三年后，他闭着眼睛也能区分十一个级别。</p>
+          <p>第四年，他晋升为二级技工，月配给券从五斤涨到七斤半。</p>
+          <p>母亲那时已从纺织局退休——不是自愿，是四十九岁那年视力骤降，无法通过每年度的操作精度考核。退休津贴每月三斤配给券，仅够她一个人不饿死。</p>
+          <p>他把自己的配给券分一半给她。母亲没有拒绝。她已经太老，老到连推辞的力气都没有了。</p>
+        </div>
+      </div>
+
+      <!-- 四、鲸歌 -->
+      <div class="sb-chapter" id="ch-whalesong">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 04</span>
+          <h2>鲸歌</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-illustration">
+          <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="whaleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#0a1018"/><stop offset="100%" stop-color="#050a10"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="280" fill="url(#whaleGrad)"/>
+            <!-- 分光仪 -->
+            <g transform="translate(300,80)" opacity="0.4">
+              <rect x="0" y="0" width="200" height="140" fill="none" stroke="#5b8abf" stroke-width="1"/>
+              <circle cx="100" cy="50" r="30" fill="none" stroke="#5b8abf" stroke-width="0.8"/>
+              <line x1="100" y1="50" x2="130" y2="50" stroke="#5b8abf" stroke-width="1.5" opacity="0.7"/>
+              <rect x="140" y="30" width="40" height="40" fill="none" stroke="#5b8abf" stroke-width="0.8"/>
+              <!-- 旋钮 -->
+              <circle cx="160" cy="60" r="6" fill="none" stroke="#5b8abf" stroke-width="0.8"/>
+              <circle cx="160" cy="80" r="6" fill="none" stroke="#5b8abf" stroke-width="0.8"/>
+            </g>
+            <!-- 光波长标记 -->
+            <g transform="translate(300,240)">
+              <line x1="30" y1="0" x2="170" y2="0" stroke="#5b8abf" stroke-width="0.4" opacity="0.3"/>
+              <text x="30" y="12" fill="#5b8abf" font-size="9" opacity="0.3">460</text>
+              <text x="70" y="12" fill="#5b8abf" font-size="9" opacity="0.3">470</text>
+              <text x="110" y="12" fill="#5b8abf" font-size="9" opacity="0.3">475</text>
+              <text x="150" y="12" fill="#5b8abf" font-size="9" opacity="0.3">480</text>
+              <text x="170" y="12" fill="#5b8abf" font-size="9" opacity="0.3">玄青-8</text>
+            </g>
+            <!-- 鲸鱼剪影 -->
+            <g transform="translate(150,160)" opacity="0.08">
+              <ellipse cx="0" cy="0" rx="80" ry="25" fill="#5b8abf"/>
+              <ellipse cx="-70" cy="0" rx="20" ry="12" fill="#5b8abf"/>
+              <path d="M80,0 Q120,-30 140,0 Q120,30 80,0" fill="#5b8abf"/>
+            </g>
+            <text x="400" y="270" text-anchor="middle" fill="#5b8abf" font-size="10" font-family="Noto Serif SC" opacity="0.2">新历258年 · 分光仪培训教室</text>
+          </svg>
+        </div>
+        <div class="sbc-text">
+          <p>他二十七岁那年，染料车间来了一批新设备。帝国工部推广"标准化色度控制系统"，淘汰了沿用四十年的手工色卡比对，改用光学分光仪——一台比人还高、布满齿轮和镜片的精密机械。</p>
+          <p>车间主任在晨会上宣布：原有色卡比对岗位全部裁撤，相关人员转入"高危原料预处理工段"。</p>
+          <p>全场沉默。高危原料预处理，是染料车间死亡率最高的岗位。去年该工段在编四十七人，年终存活三十一。</p>
+          <p>主任的目光扫过人群。</p>
+          <p class="sbc-dialog">"丙戌柒叁玖。"</p>
+          <p>他站出来。</p>
+          <p>"你靛蓝釜干了十四年，色卡比对全厂第一。分光仪培训名额，给你。"</p>
+          <p>三天后，他走进培训教室。教室里只有六个人。教官是个穿深蓝工师袍的年轻人，戴玳瑁框水晶眼镜，苍白瘦削，说话时有轻微的喘鸣——那是长期接触化学试剂损伤呼吸道的典型症状。</p>
+          <p>教官说："我姓秦。天工院格物科。"</p>
+          <p>分光仪的原理，是光通过介质时，不同波长的吸收率不同。你们不需要懂原理，只需要记住操作。他示范三次，然后让六个人轮流操作。</p>
+          <p>轮到丙戌柒叁玖时，他没有立刻转动旋钮。他盯着表盘上那根微微颤动的指针，又看看窗外——窗外是厂房的墙壁，什么也看不见，但他知道墙外有一根废弃的蒸汽管道，管道的泄压阀会在每天下午三点发出低沉的共鸣。</p>
+          <p>他慢慢转动旋钮。指针划过470纳米、475纳米、480纳米。表盘读数停在<strong>"玄青-8"</strong>。</p>
+          <p>秦教官走过来，看了一眼表盘，又看了一眼他。</p>
+          <p>"你以前听过某种……低频的声音？"秦教官问。</p>
+          <p>他怔了一下。</p>
+          <p>"下午三点，管道。"他说。</p>
+          <p>秦教官沉默片刻。</p>
+          <p class="sbc-highlight">"那不是管道。那是鲸歌。"</p>
+          <p>那是他第一次听见这个词。秦教官没有解释。他只是从公文包里取出一张泛黄的图纸，展开。图纸上画着一把改造过的吹风筒，旁边密密麻麻标注着他看不懂的算式。</p>
+          <p>"如果有人问起，"秦教官说，"你从未见过这张图。"他点头。</p>
+          <p>培训结束那天，秦教官对他说："你通过考核了。"他站起来，准备离开。</p>
+          <p>"等等。"</p>
+          <p>秦教官从抽屉里取出一个小布包，推过桌面。他打开。里面是一小块打磨成鱼形的贝壳，边缘光滑，颜色褪得几乎看不见原来的纹路。</p>
+          <p>"这是帆鳍鲷。"秦教官说，"1932年灭绝。这东西不该出现在十三区。"</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">?</div>
+            他把贝壳握在手心，很久。<br/>"为什么给我？"<br/>秦教官没有回答。
+          </div>
+          <p>他后来再也没有见过秦教官。听人说，秦教官被调走了，去了河西走廊，又有人说去了金山省。没有人知道确切下落。</p>
+          <p>那块帆鳍鲷的贝壳，他藏在床板底下，用三层粗布包着。每年霜月十九日——他入职染料车间的日子——他会取出来看一次。</p>
+          <p>贝壳很安静。但每当下午三点，那根废弃管道的泄压阀开始鸣响时，他总觉得那声音和海有关。</p>
+        </div>
+      </div>
+
+      <!-- 五、疫病 -->
+      <div class="sb-chapter" id="ch-sickness">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 05</span>
+          <h2>疫病</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>新历259年夏，染料车间发生化学品泄漏。事故原因调查了三个月，结论是"设备老化，非责任事故"。没有人被追责，也没有人被补偿。</p>
+          <p>唯一的后果是：事发当天在岗的三十一名工人，有十九人出现不同程度的呼吸道灼伤。他是十九人之一。</p>
+          <p>治疗是免费的——帝国《工伤救治条例》规定，十三区工人在岗期间受伤，可享受基础医疗。所谓基础医疗，就是每天一次生理盐水漱口，每三天一次蒸汽吸入，每七天一次心肺听诊。</p>
+          <p>十九人中有四人发展成慢性支气管炎，两人肺功能永久性损伤，一人于次年死于继发性肺炎。</p>
+          <p>他是那四人之一。</p>
+          <p>慢性支气管炎没有特效药。医生开给他的处方是：避免接触刺激性气体，注意保暖，加强营养。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">✚</div>
+            避免接触刺激性气体——他是染料车间二级技工。<br/>注意保暖——他的棚屋在冬季室内温度零下三度。<br/>加强营养——他的月配给券七斤半，分一半给母亲。
+          </div>
+          <p>他把处方折成小方块，塞进床板底下，和那片帆鳍鲷的贝壳放在一起。</p>
+          <p>那一年他咳嗽了一整个冬天。</p>
+        </div>
+      </div>
+
+      <!-- 六、母亲 -->
+      <div class="sb-chapter" id="ch-mother">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 06</span>
+          <h2>母亲</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>母亲死于新历262年霜月十九日。</p>
+          <p>他那天上早班。出门前母亲躺在草垫上，眼睛闭着，呼吸很轻。他以为她睡着了。</p>
+          <p>下班回来，她还是那个姿势。他伸手探她的鼻息。</p>
+          <p class="sbc-highlight">没有。</p>
+          <p>他在草垫边坐了很久。窗外，永昼仪的光芒正从瓷白渐变为暗红，是"日落"时分。值班员在宿舍区巡逻，脚步声由远及近，又由近及远。</p>
+          <p>他没有哭。</p>
+          <p>他把母亲留下的遗物整理出来：一套洗得发白的工装，一双补过三次的布鞋，一个用旧铁盒改成的针线包，里面装着几枚她从不舍得用的新针。</p>
+          <p>还有一张叠成小方块的、边缘破损的登记表——那是新历214年的旧表，纸已泛黄，字迹已褪。</p>
+          <div class="sbc-document sbc-doc-mini">
+            <strong>丙戌陆壹贰</strong> · 女 · 籍贯：岭南道·广府府·新会县。<br/>
+            入区原因：帝国征用，随军属迁入。<br/>
+            备注：夫丙戌伍玖壹，阵亡。有子丙戌柒叁玖，时年未育。
+          </div>
+          <p>他把登记表叠好，和那块帆鳍鲷贝壳、那张处方折纸，一起放进枕边的铁皮盒里。</p>
+          <p>第二天清晨五点四十分，汽笛响起。他起身，穿好工装，走向染料车间。</p>
+          <p>那天下午三点，管道的泄压阀照常鸣响。他站在窗前，听着那低沉悠长的声音，想起母亲说过的话：</p>
+          <p class="sbc-dialog">"你爹说，海风里有盐。"</p>
+        </div>
+      </div>
+
+      <!-- 七、归化 -->
+      <div class="sb-chapter" id="ch-naturalize">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 07</span>
+          <h2>归化</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>新历267年，《金山条约》签署后第八年。</p>
+          <p>帝国殖民事务总署颁布《十三区人口结构性优化纲要》，鼓励"长期服役、无违纪记录、具备专业技能"的受庇之民申请归化，转为殖民臣民。</p>
+          <div class="sbc-document">
+            <div class="sbc-doc-header">
+              <span class="sbc-doc-tag">归化条件</span>
+            </div>
+            <div class="sbc-doc-body">
+              <p>一、连续在岗二十五年以上。<br/>二、近十年无任何违纪记录。<br/>三、通过帝国通用语初级考试。<br/>四、通过帝国历史与价值观基础考核。<br/>五、缴纳归化费用：帝国银元五百元，或等价配给券三千斤。</p>
+            </div>
+          </div>
+          <p>他当时五十六岁，在染料车间工作了二十三年，距离第一项条件还差两年。违纪记录是零。通用语——他听得懂一些，但不会读写。帝国历史与价值观——他一无所知。</p>
+          <p>归化费用：三千斤配给券。他每年的配给券总收入是九十斤。不吃不喝，三十三年。</p>
+          <p>车间主任在晨会上宣读文件时，没有人说话。三千斤配给券，相当于一个十三区工人四十五年的全部收入。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">§</div>
+            归化政策不是为十三区人设计的。它只是帝国统计报告里一行漂亮的数字，证明"帝国为受庇之民提供了上升通道"。
+          </div>
+          <p>他把文件折成小方块，塞进床板底下。那片帆鳍鲷的贝壳，已经陪了他九年。</p>
+        </div>
+      </div>
+
+      <!-- 八、退休 -->
+      <div class="sb-chapter" id="ch-retire">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 08</span>
+          <h2>退休</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>新历272年，他六十一岁。染料车间引进全自动配料系统，人工操作岗位裁撤70%。他作为"资深技工"被留用一年，负责培训新来的操作员。</p>
+          <p>新操作员都是年轻人，最年轻的十九岁，最年长的二十七岁。他们叫他"丙戌师傅"。</p>
+          <p>他教他们识别靛蓝的十二级色差，教他们听蒸汽管道的鸣响判断压力是否正常，教他们如何在不伤及手部的情况下快速旋紧取样釜的密封螺栓。</p>
+          <p>有一个十九岁的男孩问他："师傅，你干这行多少年了？"</p>
+          <p>他说："二十八年。"</p>
+          <p>男孩惊叹："二十八年！那你不是可以申请归化了？"</p>
+          <p>他说："还不够条件。"</p>
+          <p>男孩问："还差什么？"</p>
+          <p>他说："钱。"</p>
+          <p>男孩沉默。</p>
+          <p>培训结束那天，他领到最后一份工资：配给券七斤，帝国银元两角。他把银元攥在手心，很久。</p>
+          <p>那天下午三点，泄压阀的鸣响如常传来。他站在窗前，听着那声音。二十八年了。那根管道还是老样子，帝国工部从不肯花钱维修废弃设施。但它每天下午三点准时鸣响，风雨无阻。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">?</div>
+            他想起二十八年前，培训教室里的秦教官。<br/>"那不是管道。那是鲸歌。"<br/>他把贝壳贴在耳边。没有声音。它只是一小块死亡的碳酸钙。<br/>但他分明听见了海。
+          </div>
+        </div>
+      </div>
+
+      <!-- 九、死 -->
+      <div class="sb-chapter" id="ch-death">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 09</span>
+          <h2>死</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-illustration">
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="deathSky" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#05050a"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="300" fill="url(#deathSky)"/>
+            <!-- 靛蓝釜 -->
+            <g transform="translate(300,100)" opacity="0.35">
+              <rect x="0" y="20" width="200" height="160" rx="8" fill="none" stroke="#4a5a7a" stroke-width="1.2"/>
+              <rect x="10" y="10" width="180" height="20" rx="3" fill="none" stroke="#4a5a7a" stroke-width="0.8"/>
+              <circle cx="100" cy="80" r="30" fill="none" stroke="#4a5a7a" stroke-width="0.6" opacity="0.5"/>
+              <circle cx="100" cy="80" r="15" fill="none" stroke="#4a5a7a" stroke-width="0.5" opacity="0.3"/>
+            </g>
+            <!-- 人物剪影 -->
+            <g transform="translate(400,140)" opacity="0.3">
+              <circle cx="0" cy="0" r="10" fill="none" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="0" y1="10" x2="0" y2="40" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="-12" y1="20" x2="12" y2="20" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="0" y1="40" x2="-8" y2="60" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="0" y1="40" x2="8" y2="60" stroke="#c9a87c" stroke-width="1"/>
+              <!-- 手按在釜壁上 -->
+              <line x1="-12" y1="18" x2="-20" y2="14" stroke="#c9a87c" stroke-width="0.8"/>
+            </g>
+            <text x="400" y="285" text-anchor="middle" fill="#5a6a8a" font-size="10" font-family="Noto Serif SC" opacity="0.2">染料车间 · 靛蓝釜 · 新历274年霜月十七日</text>
+          </svg>
+        </div>
+        <div class="sbc-text">
+          <p>新历274年霜月十七日，他六十三岁生日。</p>
+          <p>早晨汽笛响起时，他没有起身。同棚的人喊他："丙戌师傅，汽笛了。"</p>
+          <p>他说："今天休息。"</p>
+          <p>他没有休息过。入厂三十一年，他从未请过一天假，从未迟到过一次。同棚的人没有再问。</p>
+          <p>他躺在草垫上，听着窗外渐远渐近的脚步声。上班的人流像潮水一样涌出厂区，又像潮水一样涌回来，日复一日，年复一年。</p>
+          <p>下午三点，泄压阀开始鸣响。他慢慢坐起来，披上那件穿了二十年的旧工装，走出棚屋。</p>
+          <p>宿舍区很安静。值班员在岗亭里打盹，探照灯缓缓转动，光柱扫过空无一人的走廊。</p>
+          <p>他走向染料车间。</p>
+          <p>车间已经换上了全自动配料系统。他当年操作的那台靛蓝釜，被移到了角落，管道断开，仪表盘蒙着一层薄灰。他站在釜前，伸手摸了摸冰冷的釜壁。</p>
+          <p>三十一年前，他第一次站在这台釜前时，手心全是汗。班长站在身后，厉声说："手抖什么？这釜比你命值钱。"</p>
+          <p>他没敢说，他不是怕炸，是怕出错。怕出错，怕缺勤，怕口粮被扣，怕母亲挨饿。<strong>怕活不成。</strong></p>
+          <p>现在母亲死了三十七年。他活过了六十三岁，比染料车间任何一个与他同期入职的人都久。</p>
+          <p>他的手按在釜壁上，很久。</p>
+          <p>然后他听见了鲸歌。不是从废弃管道传来的，是从他自己胸腔深处传来的。那是一种低沉、悠长、几乎听不见的共鸣，像远方的雷，像海底的潮。</p>
+          <p>他闭上眼睛。</p>
+          <div class="sbc-dialog">"爹，"他说，"娘。"<br/>"海风里，真的有盐。"</div>
+          <hr class="sbc-hr"/>
+          <p>他被发现时，是第二天清晨。同棚的人见他整夜未归，报告了值班员。值班员在染料车间角落找到他，背靠着靛蓝釜，眼睛闭着，脸上没有痛苦。</p>
+          <div class="sbc-document sbc-doc-mini">
+            <strong>法医鉴定报告</strong><br/>
+            死者：丙戌柒叁玖。男。63岁。死因：心功能衰竭。<br/>
+            备注：死者生前患有慢性支气管炎、肺纤维化、冠心病，均为长期职业暴露所致。<strong>符合岗位预期寿命。</strong><br/>
+            处置建议：按《十三区丧葬管理条例》，遗体火化，骨灰集中安葬于第十三区公墓。无亲属认领。
+          </div>
+          <p>火化在当天下午进行。没有人送他。炉门关闭时，值班员在登记表上勾选"已完成"，然后转身处理下一具遗体。</p>
+          <p>他的骨灰被装进一个统一制式的陶罐，陶罐底部压印着编号：<strong>273-14-739</strong>。</p>
+          <p>第十三区公墓没有墓碑，只有编号牌。他的编号牌插在第七排第九列。</p>
+          <p>那天下雨了——不是布雨司调度的降雨，是自然降水。稀有的、未经批准的雨。水滴落在编号牌上，沿着铁皮的边缘滑下，渗进新翻的泥土里。</p>
+          <p>值班员站在雨里，看着那行编号。他忽然想起一件事：昨天——死者生日那天——早上汽笛响时，他听见死者说了句话。当时他没听清。</p>
+          <p>现在他站在雨中，终于想起来了。</p>
+          <div class="sbc-highlight">死者说的是：<br/><strong>"今天海很蓝。"</strong></div>
+        </div>
+      </div>
+
+      <!-- 十、鲸落之后 -->
+      <div class="sb-chapter sb-chapter-final" id="ch-after">
+        <div class="sbc-header">
+          <span class="sbc-num">尾声</span>
+          <h2>鲸落之后</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>新历274年霜月二十日，第十三区公墓多了一座无碑的坟。没有人来祭拜。</p>
+          <p>但那天下午三点，染料车间废弃多年的蒸汽管道，忽然发出一声极长的、极低沉的鸣响。</p>
+          <p>不是泄压。是共振。</p>
+          <p>像某种遥远的声音，终于找到了回响的出口。像一头沉入深海的鲸，在海底的黑暗中，缓缓张开了口。</p>
+          <hr class="sbc-hr"/>
+          <p>后来的人不知道那把吹风筒的来历。不知道秦教官，不知道帆鳍鲷，不知道当年有一个人在靛蓝釜前站了三十一年，只为了活着。</p>
+          <p>他们只知道：每天下午三点，染料车间角落那台废弃的旧釜，会发出一种奇怪的低鸣。</p>
+          <p>有人说那是管道老化。有人说那是帝国工部偷工减料。有人说那只是风。</p>
+          <p>只有一个刚入职的十九岁男孩，在某个下午独自加班时，把耳朵贴在了釜壁上。</p>
+          <p>他听了很久。</p>
+          <p>然后他抬起头，对空无一人的车间说：</p>
+          <p class="sbc-dialog">"师傅，你在唱什么？"</p>
+          <p>釜壁沉默。</p>
+          <p>窗外，永昼仪的光芒正从瓷白渐变为暗红。</p>
+          <p>他的眼眶忽然湿了。他不知道为什么。</p>
+          <p>他只是觉得，那声音里，有一片他从没见过、却一直在等他的海。</p>
+          <hr class="sbc-hr"/>
+          <div class="sbc-epitaph">
+            <div class="sbc-epitaph-decoration">
+              <svg width="120" height="30" viewBox="0 0 120 30">
+                <path d="M10,15 Q60,5 110,15" fill="none" stroke="#4a5a7a" stroke-width="0.6" opacity="0.3"/>
+                <path d="M10,15 Q60,25 110,15" fill="none" stroke="#4a5a7a" stroke-width="0.6" opacity="0.2"/>
+              </svg>
+            </div>
+            《第十三区公墓 · 编号273-14-739》
+            <div class="sbc-epitaph-name">丙戌柒叁玖</div>
+            <div class="sbc-epitaph-dates">新历231年霜月十七日 — 新历274年霜月十七日</div>
+          </div>
+          <div class="sbc-document sbc-doc-mini" style="text-align: center;">
+            岗位：染料车间 · 靛蓝釜 · 二级技工<br/>
+            在岗：三十一年零三百一十四天<br/>
+            缺勤：零 · 违纪：零<br/>
+            抚恤金：三十斤粗粮，分十二个月发放<br/>
+            无亲属认领
+          </div>
+          <p style="text-align:center; margin-top: 20px; font-family: var(--font-serif); color: var(--text-dim); font-size: 12px; letter-spacing: 2px;">
+            ——帝国人口署 · 第十三区登记站 · 档案终——
+          </p>
+          <div class="sbc-end-mark">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+              <circle cx="25" cy="25" r="22" fill="none" stroke="#4a5a7a" stroke-width="0.6" opacity="0.25"/>
+              <text x="25" y="30" text-anchor="middle" fill="#4a5a7a" font-size="12" opacity="0.25">273</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 故事导航 -->
+  <section id="story-nav">
+    <a href="treaty.html" class="sn-link sn-prev">
+      <span class="sn-arrow">←</span>
+      <span class="sn-info">
+        <span class="sn-label">上一篇</span>
+        <span class="sn-title">金山条约：血月下的交割</span>
+      </span>
+    </a>
+    <a href="stories.html" class="sn-link sn-mid">
+      <span class="sn-label">故事集目录</span>
+      <span class="sn-title">所有故事 →</span>
+    </a>
+    <div class="sn-link sn-next sn-disabled">
+      <span class="sn-info">
+        <span class="sn-label">下一篇</span>
+        <span class="sn-title">筹备中…</span>
+      </span>
+      <span class="sn-arrow">→</span>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer id="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><a href="index.html">焚烬纪元</a></div>
+      <div class="footer-tagline">神弃时代 · 故事集</div>
+      <div class="footer-links">
+        <a href="index.html">返回首页</a>
+        <a href="debate.html">辩论实录</a>
+        <a href="treaty.html">金山条约</a>
+        <a href="#story-hero">回到顶部</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/story.js"></script>
+</body>
+</html>

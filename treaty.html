@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>金山条约 · 焚烬纪元</title>
+  <link rel="stylesheet" href="css/story.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 粒子背景 -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- 导航 -->
+  <nav id="main-nav">
+    <div class="nav-logo"><a href="index.html">焚烬纪元</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">首页</a></li>
+      <li><a href="debate.html">辩论实录</a></li>
+      <li><a href="stories.html">故事集</a></li>
+      <li><a href="treaty.html" class="active">金山条约</a></li>
+    </ul>
+    <div class="nav-era">神弃时代 · 新历273年</div>
+  </nav>
+
+  <!-- 阅读进度条 -->
+  <div id="progress-bar"></div>
+  <!-- 装饰徽章 -->
+  <div class="sb-badge">STORY · 001</div>
+
+  <!-- 故事英雄区 -->
+  <section id="story-hero">
+    <div class="sh-overlay"></div>
+    <div class="sh-content">
+      <div class="sh-meta">
+        <span class="sh-tag">STORY · 001</span>
+        <span class="sh-date">新历273年 · 霜月十九日</span>
+      </div>
+      <h1 class="sh-title">
+        <span class="sh-line-main">金山条约</span>
+        <span class="sh-line-sub">血月下的交割</span>
+      </h1>
+      <div class="sh-divider"></div>
+      <p class="sh-desc">崇日殿内，环形谈判桌。大明 vs 欧罗巴。三个州的命运，十七个月的石油，一声鲸歌。</p>
+      <!-- 时间线迷你导航 -->
+      <div class="sh-timeline">
+        <button class="sht-dot active" data-target="chongri" title="崇日殿">
+          <span class="sht-label">崇日殿</span>
+        </button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="price" title="价码">
+          <span class="sht-label">价码</span>
+        </button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="whale" title="鲸歌">
+          <span class="sht-label">鲸歌</span>
+        </button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="sign" title="签字">
+          <span class="sht-label">签字</span>
+        </button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="silence" title="沉默">
+          <span class="sht-label">沉默</span>
+        </button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="sea" title="海">
+          <span class="sht-label">海</span>
+        </button>
+        <div class="sht-line"></div>
+        <button class="sht-dot" data-target="whale-end" title="鲸">
+          <span class="sht-label">鲸</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文 -->
+  <article id="story-body">
+    <div class="sb-inner">
+
+      <!-- 章节一：崇日殿 -->
+      <div class="sb-chapter" id="ch-chongri">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 01</span>
+          <h2>崇日殿</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-illustration">
+          <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#1a1020"/>
+                <stop offset="100%" stop-color="#0a0618"/>
+              </linearGradient>
+              <radialGradient id="lampGlow" cx="50%" cy="30%" r="40%">
+                <stop offset="0%" stop-color="#f0c040" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#f0c040" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- 天空 -->
+            <rect width="800" height="350" fill="url(#skyGrad)"/>
+            <rect width="800" height="350" fill="url(#lampGlow)"/>
+            <!-- 永昼仪光芒 -->
+            <g opacity="0.12">
+              <ellipse cx="400" cy="0" rx="300" ry="80" fill="#f0c040"/>
+            </g>
+            <!-- 崇日殿轮廓 -->
+            <g transform="translate(200,80)">
+              <!-- 主体 -->
+              <rect x="0" y="40" width="400" height="180" fill="#1a1220" stroke="#c9a87c" stroke-width="0.8" opacity="0.7"/>
+              <!-- 日月纹章 -->
+              <circle cx="200" cy="90" r="30" fill="none" stroke="#c9a87c" stroke-width="1.5" opacity="0.8"/>
+              <path d="M200 60 A30 30 0 0 1 200 120" fill="#c9a87c" opacity="0.3"/>
+              <circle cx="200" cy="90" r="8" fill="#c9a87c" opacity="0.5"/>
+              <!-- 立柱 -->
+              <rect x="40" y="40" width="8" height="180" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.4"/>
+              <rect x="352" y="40" width="8" height="180" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.4"/>
+              <!-- 台阶 -->
+              <rect x="-20" y="220" width="440" height="12" fill="none" stroke="#c9a87c" stroke-width="0.6" opacity="0.3"/>
+              <rect x="-10" y="228" width="420" height="10" fill="none" stroke="#c9a87c" stroke-width="0.6" opacity="0.2"/>
+              <!-- 瓦斯喷灯 -->
+              <g transform="translate(60,20)">
+                <line x1="0" y1="10" x2="0" y2="30" stroke="#f0c040" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="0" cy="32" r="4" fill="#f0c040" opacity="0.8">
+                  <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <path d="M-6,36 Q0,50 6,36" fill="none" stroke="#f0c040" stroke-width="0.8" opacity="0.4">
+                  <animate attributeName="d" values="M-6,36 Q0,50 6,36;M-8,36 Q0,55 8,36;M-6,36 Q0,50 6,36" dur="3s" repeatCount="indefinite"/>
+                </path>
+              </g>
+              <g transform="translate(340,20)">
+                <line x1="0" y1="10" x2="0" y2="30" stroke="#f0c040" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="0" cy="32" r="4" fill="#f0c040" opacity="0.8">
+                  <animate attributeName="opacity" values="0.5;1;0.5" dur="2.3s" repeatCount="indefinite"/>
+                </circle>
+              </g>
+            </g>
+            <!-- 标题 -->
+            <text x="400" y="315" text-anchor="middle" fill="#c9a87c" font-size="13" font-family="Noto Serif SC" opacity="0.4">崇日殿 · 金山省行政府</text>
+          </svg>
+        </div>
+        <div class="sbc-text">
+          <p class="sbc-opening">金山省行政府的崇日殿，原本是西班牙殖民者在十八世纪初修建的天主教堂。</p>
+          <p>大明光武二十三年，帝国西征舰队登陆旧金山湾，用三千发舰炮将钟楼夷为平地，又在原址上垒起花岗岩与钢铁。教堂的十字架被拆下熔化，铸成行政府大门上那对日月纹章——左日右月，十二条机械龙环绕，龙口中衔的不是火球，是永不熄灭的瓦斯喷灯。</p>
+          <p>此刻是午后三刻。永昼仪将天穹压成均匀的瓷白，没有云，没有鸟，没有阴影。十二盏喷灯的火焰在风中扯成细长的橘色旗帜，发出持续的低频嗡鸣，像某种巨兽的呼吸。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">"</div>
+            崇日殿内，谈判桌呈环形。大明一侧坐南朝北，背后是整面墙的琉璃浮雕——帝国疆域图，从东亚至金山，从澳洲至非洲据点，赤道横贯中央，用朱砂标注的"日月不落线"将世界切成两半。
+          </div>
+          <p>欧罗巴一侧坐北朝南，背后只有素白墙壁。</p>
+          <p>韩沙上校站在大明代表团的次席。他穿着靖神卫戍军的深蓝礼服，左臂的蒸汽义肢用黑檀木贴面覆盖，只留下关节处三道细密的泄压槽。胸前"承天启运"勋章与"日月双辉"绶带的位置，正好与背后浮雕上金山省的地理坐标重叠。</p>
+          <p>他的对面，隔着十二步红绒地毯，坐着威廉·阿什顿议员。</p>
+          <p class="sbc-highlight">三天前，他们在日内瓦辩论荣耀与生命。<br/>三天后，他们在金山交割三个州。</p>
+        </div>
+      </div>
+
+      <!-- 章节二：价码 -->
+      <div class="sb-chapter" id="ch-price">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 02</span>
+          <h2>价码</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>谈判已进行两个时辰。</p>
+          <p>大明首席代表——殖民事务总长李经述——没有看任何文件。他七十三岁，须发如雪，说话时眼皮低垂，仿佛在念诵早已写好的祭文。</p>
+          <div class="sbc-document">
+            <div class="sbc-doc-header">
+              <span class="sbc-doc-tag">◈ 大明帝国内部备忘录</span>
+              <span class="sbc-doc-date">新历273年霜月十九日</span>
+            </div>
+            <div class="sbc-doc-body">
+              <p><strong>哥伦比亚省</strong>——原英属，新历179年纳入联盟体系。面积四十七万三千六百平方公里。主要资源：铁、铜、木材、水力。人口：欧洲移民后裔二百一十万，殖民臣民九十七万。</p>
+              <p><strong>杰斐逊省</strong>——原法属，新历183年割让予联盟。面积五十三万一千二百平方公里。主要资源：金、银、铅、锌。人口：欧洲移民后裔一百六十三万，殖民臣民一百一十二万，十三区受庇之民约四万。</p>
+              <p><strong>奥林匹克省</strong>——原西属，新历190年联盟托管。面积二十九万八千平方公里。主要资源：木材、渔业、少量石油。人口：欧洲移民后裔七十九万，殖民臣民一百四十一万。</p>
+            </div>
+          </div>
+          <p>他放下茶盏，终于抬起眼皮。</p>
+          <p>"大明帝国开价：三州主权。联盟居民可选择：一、于两年内迁往联盟其他北美属地；二、就地归化，按《殖民臣民管理条例》第三编接受管理。"</p>
+          <div class="sbc-quote sbc-quote-blue">
+            沉默。<br/>阿什顿议员的面前摊着三州的详细地图，边缘被他无意识地卷起又抚平。他盯着那三条用红铅笔圈出的边界线——它们将在今天之后，被重画。
+          </div>
+          <p>"李总长，"他开口，声音沙哑，"联盟在北美大陆的合法据点，只剩加拿大三省。哥伦比亚、杰斐逊、奥林匹克……是我们的移民花了三代人建起的城镇、学校、教堂。"</p>
+          <p>李经述没有回应。</p>
+          <p>大明海军提督邓世昌——靖海舰队司令，七十二岁，耳背，须靠副官附耳转述——忽然开口，声音洪钟：</p>
+          <p class="sbc-dialog">"教堂？当年金山省的教堂，经不起我三千发炮弹。三百年建的，三时辰拆完。"</p>
+          <p>他顿了顿。</p>
+          <p class="sbc-dialog">"你们要教堂，回欧洲建。"</p>
+        </div>
+      </div>
+
+      <!-- 章节三：鲸歌 -->
+      <div class="sb-chapter" id="ch-whale">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 03</span>
+          <h2>鲸歌</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-illustration sbc-illustration-wide">
+          <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+            <!-- 海景 -->
+            <defs>
+              <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#050a18"/>
+                <stop offset="100%" stop-color="#0a1628"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="280" fill="url(#seaGrad)"/>
+            <!-- 海平面 -->
+            <path d="M0,180 Q200,170 400,180 Q600,190 800,180 L800,280 L0,280 Z" fill="#0a0a20" opacity="0.8"/>
+            <!-- 浪花 -->
+            <path d="M0,180 Q50,175 100,180 Q150,183 200,180" fill="none" stroke="#1a2a4a" stroke-width="0.8" opacity="0.4"/>
+            <!-- 防波堤 -->
+            <path d="M500,160 L580,220 L620,220 L700,160" fill="none" stroke="#2a2a3a" stroke-width="2" opacity="0.5"/>
+            <!-- 人影 -->
+            <g transform="translate(600,140)" opacity="0.4">
+              <circle cx="0" cy="0" r="5" fill="none" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="0" y1="5" x2="0" y2="20" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="-8" y1="12" x2="0" y2="8" stroke="#c9a87c" stroke-width="0.8"/>
+              <line x1="8" y1="12" x2="0" y2="8" stroke="#c9a87c" stroke-width="0.8"/>
+              <line x1="0" y1="20" x2="-6" y2="32" stroke="#c9a87c" stroke-width="1"/>
+              <line x1="0" y1="20" x2="6" y2="32" stroke="#c9a87c" stroke-width="1"/>
+            </g>
+            <!-- 探照灯光柱 -->
+            <path d="M650,50 L620,180" fill="none" stroke="#c9a87c" stroke-width="0.3" opacity="0.15"/>
+            <path d="M670,50 L700,180" fill="none" stroke="#c9a87c" stroke-width="0.3" opacity="0.15"/>
+            <!-- 文字 -->
+            <text x="400" y="265" text-anchor="middle" fill="#c9a87c" font-size="12" font-family="Noto Serif SC" opacity="0.3">金山省防波堤 · 霜月十九日 深夜</text>
+          </svg>
+        </div>
+        <div class="sbc-text">
+          <p>韩沙上校没有参与发言。他的职责是"军事情报确认"——核实联盟在三州的驻军数量、设施移交方案、以及"可能存在的非常规武器部署"。</p>
+          <p>这工作他做过三十多次。从西伯利亚到刚果，从澳洲内陆到太平洋群岛。每一次都是同样的流程：交换文件，确认坐标，计算吨位，签字画押。</p>
+          <p class="sbc-highlight">但这一次不一样。<br/>因为他对面坐着的，是安娜的教父。</p>
+          <p>他想起三天前日内瓦的辩论。阿什顿说："安娜选择留下，是因为如果所有尚有良知的人都离开，这座议会将彻底沦为屠宰场的管理委员会。"</p>
+          <p>韩沙当时没有回答。</p>
+          <p>现在他知道答案了。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">?</div>
+            留下的，往往不是最有希望的，而是最无法逃离的。
+          </div>
+          <p>阿什顿议员正在进行最后的抵抗。</p>
+          <p>"哥伦比亚省的柯蒂斯水电站，"他指着地图上的某个点，"是新大陆第一座大型水力发电设施，1921年由联盟工程局援建，至今为大半个不列颠哥伦比亚提供电力。它的设计寿命还有七十年。"</p>
+          <p>"移交后，帝国工部自会接管。"李经述的语气像在陈述天气预报。</p>
+          <p>"那里的工程师——我的同胞——他们愿意留下来为帝国工作吗？"</p>
+          <p>"愿意者，按殖民臣民待遇；不愿者，两年内自行迁出。"</p>
+          <p>"他们的房产、积蓄、祖坟呢？"</p>
+          <p>"不动产按《战时征用条例》评估补偿；祖坟可申请迁葬，费用自理。"</p>
+          <p>阿什顿沉默。他知道自己没有筹码。谈判开始前，他已被联盟最高统帅部私下告知底线：三州必须割让，换取大明在太平洋航线上的通行许可，以及未来五年对欧罗巴本土的石油出口配额。联盟的储油罐，只够撑十七个月。</p>
+          <hr class="sbc-hr"/>
+          <p>韩沙上校在这一刻开了口。</p>
+          <p class="sbc-dialog">"阿什顿议员。"</p>
+          <p>全场微怔。李经述侧目看他一眼，没有制止。</p>
+          <p>"奥林匹克省，渔业资源评估报告，帝国水产厅三年前做过调查。"韩沙的声音平稳，像在读一份技术文档，"结论是：该省近海渔场若采用帝国标准捕捞强度，年产量可达现行联盟模式的2.3倍。"</p>
+          <p>他看着阿什顿的眼睛。</p>
+          <p>"但报告附录里有一句话：<strong>过度捕捞已导致该海域帆鳍鲷种群下降92%，预计十五年内功能性灭绝。</strong>"</p>
+          <p>帆鳍鲷。</p>
+          <p>韩沙不知道为什么要说这个。他只是想起三天前阿什顿说的那句话：</p>
+          <p class="sbc-highlight">"十三区的少年想的是海。"</p>
+          <p>阿什顿抬起头，眼中有某种无法言说的情绪。</p>
+          <p>"你们帝国水产厅……会保护它们吗？"</p>
+          <p>韩沙没有回答。</p>
+          <p>李经述放下茶盏，淡淡开口："帝国渔业政策，不在今日谈判议程。"</p>
+        </div>
+      </div>
+
+      <!-- 章节四：签字 -->
+      <div class="sb-chapter" id="ch-sign">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 04</span>
+          <h2>签字</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>十七时整，谈判进入最终条款审阅。</p>
+          <p>大明方面的条件逐一宣读——</p>
+          <div class="sbc-treaty">
+            <div class="sbc-treaty-header">
+              <span>《金山条约》· 主要条款</span>
+              <span class="sbc-th-date">新历273年霜月十九日</span>
+            </div>
+            <div class="sbc-treaty-clause">
+              <div class="sbc-tc-num">壹</div>
+              <div class="sbc-tc-text">哥伦比亚、杰斐逊、奥林匹克三州主权，自新历273年霜月十九日起，移交天启大明帝国。</div>
+            </div>
+            <div class="sbc-treaty-clause">
+              <div class="sbc-tc-num">贰</div>
+              <div class="sbc-tc-text">三州境内所有联盟军事设施、驻军、武器装备，于新历274年雾月一日前完成撤离。逾期未撤者，帝国予以没收。</div>
+            </div>
+            <div class="sbc-treaty-clause">
+              <div class="sbc-tc-num">叁</div>
+              <div class="sbc-tc-text">三州境内联盟公民，可选择：<br/><strong>· 甲类</strong>：于新历275年霜月三十日前，自行迁往联盟其他属地。帝国提供每人三十斤口粮、二十帝国银元迁徙补助。<br/><strong>· 乙类</strong>：就地归化，接受《殖民臣民管理条例》管辖。</div>
+            </div>
+            <div class="sbc-treaty-clause">
+              <div class="sbc-tc-num">肆</div>
+              <div class="sbc-tc-text">三州境内十三区受庇之民，就地移交帝国人口署重新登记，不适用第三条。原联盟管理者需于三十日内提供完整名册，逾期每人次罚款一百帝国银元。</div>
+            </div>
+            <div class="sbc-treaty-clause sbc-tc-exchange">
+              <div class="sbc-tc-num">伍</div>
+              <div class="sbc-tc-text">
+                <span class="sbc-tc-label">帝国承诺（交换条件）：</span><br/>
+                · 开放金山省维多利亚港，供联盟商船停靠补给，年配额三十万吨。<br/>
+                · 自新历274年起，每年向联盟本土出口石油五十万吨。<br/>
+                · 承诺未来五年内，不在太平洋东岸对联盟其他北美属地发起进一步领土要求。
+                <div class="sbc-tc-note">联盟的储油罐，只够撑<strong>十七个月</strong>。</div>
+              </div>
+            </div>
+          </div>
+          <p>李经述念完最后一条，将文件转向阿什顿。</p>
+          <p>"议员阁下，若无异议，请签字。"</p>
+          <p>阿什顿看着那页纸。</p>
+          <p>五十万吨石油。三十万吨补给配额。五年停战承诺。</p>
+          <p>联盟用三个州，换来了十七个月的生命线。</p>
+          <p>他拿起笔。</p>
+          <p>笔尖悬在签名栏上方三寸，停顿。</p>
+          <p>他抬起头，看向韩沙。</p>
+          <p class="sbc-dialog">"韩沙上校。"</p>
+          <p>韩沙立正。</p>
+          <p>"三天前，我说生命所求，不过是一片属于自己的海。"</p>
+          <p>他的声音很轻，像在自言自语。</p>
+          <p>"现在我把三个州的海，交给你们。"</p>
+          <p>笔落下。</p>
+          <div class="sbc-quote sbc-quote-blue">
+            <div class="sbcq-mark">✎</div>
+            《金山条约》签字用时：七分钟。<br/>生效日期：新历273年霜月十九日。
+          </div>
+        </div>
+      </div>
+
+      <!-- 章节五：沉默 -->
+      <div class="sb-chapter" id="ch-silence">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 05</span>
+          <h2>沉默</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>签字仪式结束后，欧罗巴代表团起立，依次与明方要员握手。阿什顿议员握到韩沙时，停顿了比其他人更长的一瞬。</p>
+          <p>"安娜的未婚夫约翰，"阿什顿低声问，"他还活着吗？"</p>
+          <p>"活着。"韩沙说，"1927年交换战俘后，他在格拉斯哥当机械师。去年退休。"</p>
+          <p>"他过得好吗？"</p>
+          <p>"他娶了安娜的表妹，有两个孩子。长子取名'安妮'——女孩，但他说，安娜这个名字，不分男女。"</p>
+          <p>阿什顿没有回答。他松开手，转身走向殿门。</p>
+          <p>崇日殿外，永昼仪的光芒均匀地洒在金山省行政府的广场上。两千名帝国士兵列成方阵，枪刺如林。更远处，三艘"镇海鲲"级战舰的轮廓隐在雾气中，炮塔缓缓转动，指向大海的方向。</p>
+          <div class="sbc-quote">
+            阿什顿站在台阶顶端，回头看了一眼殿内的帝国疆域浮雕。<br/>赤道横贯中央。金山省被涂成深红，与本土连成一片。而更东边，落基山脉另一侧，那三个刚刚割让的州，还没有被重新上色。<br/>仍是地图上白色的、等待命名的空白。
+          </div>
+          <p>他走下台阶。</p>
+        </div>
+      </div>
+
+      <!-- 章节六：海 -->
+      <div class="sb-chapter" id="ch-sea">
+        <div class="sbc-header">
+          <span class="sbc-num">Chapter 06</span>
+          <h2>海</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>韩沙上校走出崇日殿时，已是黄昏。</p>
+          <p>永昼仪开始调低色温，模拟"日落"。天穹从瓷白渐变为铁灰，又从铁灰渗出一丝暗红，像伤口结痂前的颜色。</p>
+          <p>他在台阶上站了很久。</p>
+          <p>有士兵小跑过来，呈上一份刚收到的密电。韩沙拆开，扫了一眼：</p>
+          <div class="sbc-document sbc-doc-mini">
+            <strong>奥林匹克省接收先遣队报告</strong>：渔港已移交。渔民约六千人选择归化，两千人申请迁徙，其余待定。<br/>另：当地渔业协会会长提交一份陈情书，请求保留帆鳍鲷禁渔区。附地图一份，坐标已转水产厅。<br/>水产厅回复：已存档，待工部审议。<strong>暂不予批准。</strong>
+          </div>
+          <p>韩沙将电报折起，放进口袋。</p>
+          <p>他没有回行政府大楼。他走向海边。</p>
+          <p>金山省的海，与他父亲葬身的南洋不同。这里的浪更冷，风更硬，礁石上覆着厚厚一层藤壶，边缘锋利如刀。他沿着防波堤走，蒸汽义肢的关节在寂静中发出轻微的气压嘶声。</p>
+          <p>防波堤尽头，有一块被海浪磨圆的混凝土墩。他坐下，取下左臂的义肢，放在膝上。接口处的皮肤被汗浸得发红，隐隐渗出血丝。</p>
+          <p>海风灌进义肢的泄压槽，发出悠长的、低沉的鸣响。</p>
+          <div class="sbc-quote">
+            <div class="sbcq-mark">~</div>
+            像海的声音。<br/>像那个十三区少年改的吹风筒，十七年来在龙江造船厂发出的声音。<br/>像安娜回头看他那一眼时的沉默。
+          </div>
+          <p>他闭上眼睛。</p>
+          <p>他不知道坐了多久。海潮涨了又退。天上的"月亮"开始从暗红转为靛蓝，那是子夜时分的模拟色温。防波堤的尽头，探照灯每隔三十秒扫过一次，光柱切开雾气，在浪尖上碎成万点银鳞。</p>
+          <p>他听见身后有脚步声。很轻，像怕打扰什么。</p>
+          <p>韩沙没有回头。</p>
+          <p>"阿什顿议员。"他说。</p>
+          <p>阿什顿在他身旁坐下，没有询问义肢的事，没有询问电报，没有询问任何谈判相关的事。他们并肩坐着，看海。</p>
+          <p>很久之后，阿什顿说：</p>
+          <p>"你父亲葬在南洋。"</p>
+          <p>韩沙说："是。"</p>
+          <p>"你去看过他吗？"</p>
+          <p>"……没有。帝国不给十三区以外的平民发探亲许可。等我当上军官，已经找不到确切位置了。"他顿了顿，"南洋海战之后，那片海域划为辐射警戒区，至今未解禁。"</p>
+          <p>阿什顿沉默。海风送来更远的汽笛声——那是维多利亚港的入港信号，联盟商船正在排队接受帝国海关的检查。</p>
+          <p>"韩沙上校。"</p>
+          <p>"嗯。"</p>
+          <p>"你三天前说，安娜的死亡兑换了三千条生命。"</p>
+          <p>韩沙没有回答。</p>
+          <p>"今天我签了字。"阿什顿的声音很平静，"用三个州的生命，兑换了联盟十七个月的命。"</p>
+          <p>他停顿。</p>
+          <p>"这笔账，你说得清吗？"</p>
+          <p>韩沙没有回答。他把义肢重新接上，关节咬合发出咔哒一声轻响。泄压槽的风鸣停了，取而代之的是更低沉、更缓慢的节奏——那是帝国标准制式义肢的怠速声，精确、可控、没有意外。</p>
+          <p>"阿什顿议员。"他说。</p>
+          <p>"嗯。"</p>
+          <p>"那条帆鳍鲷。"</p>
+          <p>"怎么？"</p>
+          <p>"禁渔区陈情书，我会以靖神卫戍军金山省独立旅的名义，附一份意见。"</p>
+          <p>他顿了顿。</p>
+          <p>"建议保留。"</p>
+          <p>阿什顿转过头，看着他的侧脸。月光——人造的、靛蓝的、均匀的月光——落在韩沙鬓角新生的白发上。</p>
+          <p>"谢谢。"阿什顿说。</p>
+          <p>韩沙没有说"不用谢"。他只是继续看着海。</p>
+        </div>
+      </div>
+
+      <!-- 尾声：鲸 -->
+      <div class="sb-chapter sb-chapter-final" id="ch-whale-end">
+        <div class="sbc-header">
+          <span class="sbc-num">尾声</span>
+          <h2>鲸</h2>
+          <div class="sbc-line"></div>
+        </div>
+        <div class="sbc-text">
+          <p>新历273年霜月二十日，凌晨三时。</p>
+          <p>《金山条约》文本加急发往南京与日内瓦。大明枢密院于当日上午七时通过批准；欧罗巴理事会于四日后召开紧急会议，以七票赞成、三票弃权、一票反对的结果，勉强通过。</p>
+          <p>哥伦比亚、杰斐逊、奥林匹克三州，正式成为帝国领土。</p>
+          <hr class="sbc-hr"/>
+          <p>五年后，帝国水产厅发布《太平洋东岸渔业资源普查报告》，首次将"帆鳍鲷"列为"需重点监测物种"，并批准奥林匹克省沿海三万公顷海域为"季节性禁渔区"。</p>
+          <div class="sbc-document sbc-doc-mini sbc-doc-gold">
+            <strong>附注</strong>："本禁渔区设置建议，由靖神卫戍军金山省独立旅韩沙上校于新历273年提出。经水产厅资源保护司审议，予以采纳。"
+          </div>
+          <p>韩沙上校没有看到这行附注。</p>
+          <p>新历276年，他在刚果盆地执行"清剿万灵教团残余据点"任务时，因座驾遭变异藤蔓贯穿，当场殉职。</p>
+          <p>遗体运回金山省安葬。墓碑上只刻了名字、生卒、以及一行帝国标准阵亡者铭文：</p>
+          <div class="sbc-epitaph">
+            <div class="sbc-epitaph-decoration">
+              <svg width="120" height="40" viewBox="0 0 120 40">
+                <path d="M10,20 Q60,5 110,20" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.4"/>
+                <path d="M10,20 Q60,35 110,20" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.3"/>
+              </svg>
+            </div>
+              承天启运，日月永耀
+              <div class="sbc-epitaph-name">韩沙 · 字铁钧</div>
+              <div class="sbc-epitaph-dates">新历245年 — 新历276年</div>
+          </div>
+          <p>据守墓人说，每年霜月十九日，总有一个穿旧式联盟议员礼服的白发老人，从加拿大三省那边过来，在这块碑前站很久。</p>
+          <p>他不说话，只是站着。有时会带一小瓶海水，洒在碑前。</p>
+          <p>墓碑不远处，是奥林匹克省那片三万公顷的禁渔区。那里的帆鳍鲷，还没灭绝。</p>
+          <div class="sbc-end-mark">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+              <circle cx="30" cy="30" r="28" fill="none" stroke="#c9a87c" stroke-width="0.8" opacity="0.3"/>
+              <circle cx="30" cy="30" r="20" fill="none" stroke="#c9a87c" stroke-width="0.5" opacity="0.2"/>
+              <text x="30" y="35" text-anchor="middle" fill="#c9a87c" font-size="14" opacity="0.4">✦</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 条约签署记录 -->
+      <div class="sb-appendix">
+        <div class="sba-header">
+          <span>《金山条约》签署记录</span>
+        </div>
+        <div class="sba-content">
+          <div class="sba-col">
+            <h4>天启大明帝国签署方</h4>
+            <ul>
+              <li>殖民事务总长 · 李经述</li>
+              <li>靖海舰队司令 · 邓世昌 提督</li>
+              <li>天工院代表 · 周明远 大宗师</li>
+            </ul>
+          </div>
+          <div class="sba-col">
+            <h4>欧罗巴诸国联盟签署方</h4>
+            <ul>
+              <li>下议院议员 · 威廉·阿什顿</li>
+              <li>联盟预算委员会主席 · 亨利·杜瓦</li>
+              <li>不列颠联合王国代表 · 詹姆斯·克 Lloyd</li>
+            </ul>
+          </div>
+          <div class="sba-footer">
+            <p>签署地点：金山省行政府 · 崇日殿</p>
+            <p>签署时间：新历273年霜月十九日 午后三刻</p>
+            <p class="sba-note">本条约文本以汉文、拉丁文双语书写，具有同等法律效力。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- 故事导航（上一篇/下一篇） -->
+  <section id="story-nav">
+    <a href="debate.html" class="sn-link sn-prev">
+      <span class="sn-arrow">←</span>
+      <span class="sn-info">
+        <span class="sn-label">上一篇</span>
+        <span class="sn-title">辩论实录：荣耀与生命</span>
+      </span>
+    </a>
+    <a href="stories.html" class="sn-link sn-mid">
+      <span class="sn-label">故事集目录</span>
+      <span class="sn-title">所有故事 →</span>
+    </a>
+    <div class="sn-link sn-next sn-disabled">
+      <span class="sn-info">
+        <span class="sn-label">下一篇</span>
+        <span class="sn-title">筹备中…</span>
+      </span>
+      <span class="sn-arrow">→</span>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer id="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><a href="index.html">焚烬纪元</a></div>
+      <div class="footer-tagline">神弃时代 · 故事集</div>
+      <div class="footer-links">
+        <a href="index.html">返回首页</a>
+        <a href="stories.html">故事集</a>
+        <a href="#story-hero">回到顶部</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/story.js"></script>
+</body>
+</html>

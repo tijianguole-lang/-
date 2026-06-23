@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>辩论实录 · 焚烬纪元</title>
+  <link rel="stylesheet" href="css/debate.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 粒子背景 -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- 导航 -->
+  <nav id="main-nav">
+    <div class="nav-logo"><a href="index.html">焚烬纪元</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">首页</a></li>
+      <li><a href="index.html#factions">阵营</a></li>
+      <li><a href="index.html#comparison">对比</a></li>
+      <li><a href="debate.html" class="active">辩论实录</a></li>
+    </ul>
+    <div class="nav-era">神弃时代</div>
+  </nav>
+
+  <!-- 阅读进度条 -->
+  <div id="progress-bar"></div>
+
+  <!-- 英雄区 -->
+  <section id="debate-hero">
+    <div class="debate-hero-inner">
+      <div class="dh-meta">
+        <span class="dh-tag">DEBATE TRANSCRIPT</span>
+        <span class="dh-date">新历273年 · 霜月十五日</span>
+      </div>
+      <h1 class="dh-title">
+        <span class="dh-line">荣耀与生命</span>
+        <span class="dh-sub">孰为文明之基石？</span>
+      </h1>
+      <div class="dh-divider"></div>
+      <p class="dh-desc">
+        日内瓦，欧罗巴联盟总秘书处，第七调解厅。<br/>
+        大明-欧罗巴非正式文化交流会 · 特别辩论单元。
+      </p>
+      <div class="dh-participants">
+        <div class="dhp-card hpr-ming">
+          <div class="dhp-avatar">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="avatarMing" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#c9a87c"/>
+                  <stop offset="100%" stop-color="#8a5a20"/>
+                </linearGradient>
+              </defs>
+              <!-- 背景 -->
+              <rect width="100" height="100" rx="8" fill="#1a1207"/>
+              <!-- 日月纹章 -->
+              <circle cx="50" cy="38" r="18" fill="none" stroke="url(#avatarMing)" stroke-width="1.5"/>
+              <path d="M50 20 A18 18 0 0 1 50 56" fill="url(#avatarMing)" opacity="0.4"/>
+              <!-- 简笔画头像 -->
+              <circle cx="50" cy="38" r="10" fill="none" stroke="#c9a87c" stroke-width="1.2"/>
+              <line x1="42" y1="42" x2="36" y2="50" stroke="#c9a87c" stroke-width="1.2"/>
+              <line x1="58" y1="42" x2="64" y2="50" stroke="#c9a87c" stroke-width="1.2"/>
+              <line x1="44" y1="52" x2="50" y2="58" stroke="#c9a87c" stroke-width="1" opacity="0.6"/>
+              <line x1="56" y1="52" x2="50" y2="58" stroke="#c9a87c" stroke-width="1" opacity="0.6"/>
+              <!-- 勋章示意 -->
+              <circle cx="72" cy="30" r="4" fill="none" stroke="#f0c040" stroke-width="1"/>
+              <circle cx="72" cy="30" r="2" fill="#f0c040" opacity="0.5"/>
+              <!-- 义肢示意 -->
+              <line x1="30" y1="65" x2="22" y2="85" stroke="#c9a87c" stroke-width="2" opacity="0.5" stroke-dasharray="3 2"/>
+            </svg>
+          </div>
+          <div class="dhp-info">
+            <div class="dhp-name">韩沙<span class="dhp-style">·字铁钧</span></div>
+            <div class="dhp-role">天启大明帝国 · 靖神卫戍军上校</div>
+            <div class="dhp-side">正 方 <span class="dhp-pos">荣耀重于生命</span></div>
+          </div>
+        </div>
+        <div class="dhp-vs">
+          <svg viewBox="0 0 60 60" width="60" height="60">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+            <text x="30" y="36" text-anchor="middle" fill="#888" font-size="14" font-family="Noto Serif SC">VS</text>
+          </svg>
+        </div>
+        <div class="dhp-card hpr-europa">
+          <div class="dhp-avatar">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="avatarEuro" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5b8abf"/>
+                  <stop offset="100%" stop-color="#3b6080"/>
+                </linearGradient>
+              </defs>
+              <rect width="100" height="100" rx="8" fill="#0a1628"/>
+              <!-- 齿轮纹章 -->
+              <circle cx="50" cy="38" r="16" fill="none" stroke="url(#avatarEuro)" stroke-width="1.5"/>
+              <circle cx="50" cy="38" r="10" fill="none" stroke="url(#avatarEuro)" stroke-width="1"/>
+              <rect x="47" y="20" width="6" height="10" fill="url(#avatarEuro)" opacity="0.5"/>
+              <rect x="47" y="46" width="6" height="10" fill="url(#avatarEuro)" opacity="0.5"/>
+              <rect x="30" y="35" width="10" height="6" fill="url(#avatarEuro)" opacity="0.5"/>
+              <rect x="60" y="35" width="10" height="6" fill="url(#avatarEuro)" opacity="0.5"/>
+              <!-- 简笔画头像 -->
+              <circle cx="50" cy="38" r="10" fill="none" stroke="#7a9eb5" stroke-width="1.2"/>
+              <line x1="42" y1="42" x2="36" y2="50" stroke="#7a9eb5" stroke-width="1.2"/>
+              <line x1="58" y1="42" x2="64" y2="50" stroke="#7a9eb5" stroke-width="1.2"/>
+              <line x1="44" y1="52" x2="50" y2="58" stroke="#7a9eb5" stroke-width="1" opacity="0.6"/>
+              <line x1="56" y1="52" x2="50" y2="58" stroke="#7a9eb5" stroke-width="1" opacity="0.6"/>
+              <!-- 领带/议员饰 -->
+              <path d="M46,62 L50,75 L54,62 Z" fill="none" stroke="#7a9eb5" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="dhp-info">
+            <div class="dhp-name">威廉·阿什顿</div>
+            <div class="dhp-role">欧罗巴联盟 · 下议院议员</div>
+            <div class="dhp-side">反 方 <span class="dhp-pos">生命重于荣耀</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 辩论正文 -->
+  <section id="debate-body">
+    <div class="db-inner">
+
+      <!-- 第一轮：立论陈词 -->
+      <div class="db-round">
+        <div class="db-round-header">
+          <span class="db-round-num">ROUND 01</span>
+          <h2>第一轮：立论陈词</h2>
+          <div class="db-round-line"></div>
+        </div>
+
+        <!-- 韩沙立论 -->
+        <div class="db-speech speech-ming">
+          <div class="speech-header">
+            <div class="speech-avatar">
+              <svg viewBox="0 0 40 40" width="40" height="40">
+                <rect width="40" height="40" rx="4" fill="#1a1207"/>
+                <circle cx="20" cy="15" r="6" fill="none" stroke="#c9a87c" stroke-width="1"/>
+                <circle cx="20" cy="15" r="3" fill="#c9a87c" opacity="0.3"/>
+                <path d="M12,28 Q20,22 28,28" fill="none" stroke="#c9a87c" stroke-width="0.8"/>
+              </svg>
+            </div>
+            <div class="speech-meta">
+              <span class="speech-name">韩沙·字铁钧</span>
+              <span class="speech-role">天启大明帝国 · 靖神卫戍军上校</span>
+              <span class="speech-side">正 方</span>
+            </div>
+            <div class="speech-time">立论陈词</div>
+          </div>
+          <div class="speech-body">
+            <p class="speech-opening">"诸位。"</p>
+            <p>我来自一个以战火为养分的国度。在我的帝国，日月从不落下，不是因为自然眷顾，而是因为三十四亿汉人用血脉、钢铁与意志，将天穹生生托起。</p>
+            <p>在座诸位是否想过，"日月不落"这四个字，意味着什么？</p>
+            <p class="speech-highlight">它不是庆典上的颂词，不是旗帜上的纹章。它意味着：在每一寸帝国疆土上，都有汉人士兵枕戈待旦；在每一座帝国工厂里，都有汉人工匠彻夜无眠；在每一片帝国领海下，都有汉人水手的骸骨沉淀如锚。</p>
+            <p>我父亲死在南洋。那一年我十二岁。母亲收到阵亡通知时没有哭，只是把铁质抚恤勋章别在我的衣领上，说：<strong>"这是你父亲的荣耀。"</strong></p>
+            <p>后来我十七岁入伍。新兵训练第三天，班长问我：韩沙，你为什么当兵？</p>
+            <p>我说：为帝国尽忠，为家族尽孝。</p>
+            <p>班长说：<strong>错。</strong></p>
+            <p>他指着远处江面上正在试航的"镇海鲲"巨舰，说：这船三万吨钢铁，从矿石到龙骨，经了三十七道工序。每一道工序都有汉人的汗、血、命。船下水那天，它不叫"镇海鲲"，它叫<em>"三十七万汉人劳工与一千四百名殉职工匠"</em>。你觉得这名字，能吓住欧罗巴的舰队吗？能震住那些神使吗？</p>
+            <p>不能。</p>
+            <p><strong>只有"镇海鲲"这三个字，配得上那三万吨钢铁。只有"镇海鲲"这个名字，能让敌人看见它时，想起的不是三万四千条人命，而是帝国的铁拳。</strong></p>
+            <p class="speech-highlight">这就是荣耀。</p>
+            <p>它不是对死亡的粉饰。它是让死亡成为武器的锻造术，是让牺牲能够延续牺牲的价值转换器。</p>
+            <p class="speech-climax">没有荣耀，我父亲就只是南洋海底的一具枯骨。<br/>没有荣耀，我就只是一个失去父亲的孤儿。<br/>没有荣耀，帝国就只是一部吞噬人命的巨型锅炉。</p>
+            <p>荣耀让生命超越了生物学的极限。</p>
+            <p>帝国需要生命——需要汉人、殖民臣民、甚至十三区受庇之民的血肉来驱动巨构、填满战壕、维持运转。这是事实，我从不否认。但若没有荣耀为这份消耗提供意义，帝国将沦为纯粹的屠宰场。</p>
+            <p class="speech-highlight">诸位，文明与屠场的区别，不在于是否杀戮，而在于杀戮之前，是否有人愿意为那面旗帜赴死。</p>
+            <p>在帝国，每年有数百万年轻人报名入伍。他们知道死亡率是47%，知道伤残抚恤金不够买一套城郊的配给宅，知道自己的名字大概率不会刻入忠烈祠。</p>
+            <p>但他们依然报名。</p>
+            <p>因为他们相信：<strong>日月之下，应有汉家男儿的影子。</strong></p>
+            <p>这不是愚昧，这是信仰。不是被洗脑，是被赋予意义。</p>
+            <p>而意义——诸位议员，意义是生命唯一无法自足的缺失。活着本身不构成答案，活着指向何方才是。</p>
+            <p>帝国给出的方向是：让日月永不落下，让文明永不熄灭。</p>
+            <p>为此，我父亲死了，我不后悔。将来我死，我的儿子——如果他有幸生于这个时代——也不应后悔。</p>
+            <p>这不是对生命的蔑视，这是对生命极限的超越。</p>
+            <p class="speech-ending">所以我方坚持：<strong>荣耀重于生命。</strong></p>
+          </div>
+        </div>
+
+        <!-- 阿什顿立论 -->
+        <div class="db-speech speech-europa">
+          <div class="speech-header">
+            <div class="speech-avatar">
+              <svg viewBox="0 0 40 40" width="40" height="40">
+                <rect width="40" height="40" rx="4" fill="#0a1628"/>
+                <circle cx="20" cy="15" r="6" fill="none" stroke="#7a9eb5" stroke-width="1"/>
+                <circle cx="20" cy="15" r="3" fill="#7a9eb5" opacity="0.3"/>
+                <path d="M12,28 Q20,22 28,28" fill="none" stroke="#7a9eb5" stroke-width="0.8"/>
+                <!-- 议员领带 -->
+                <path d="M17,30 L20,38 L23,30 Z" fill="#7a9eb5" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="speech-meta">
+              <span class="speech-name">威廉·阿什顿</span>
+              <span class="speech-role">欧罗巴诸国联盟 · 下议院议员</span>
+              <span class="speech-side">反 方</span>
+            </div>
+            <div class="speech-time">立论陈词</div>
+          </div>
+          <div class="speech-body">
+            <p class="speech-opening">"诸位同僚，先生们。"</p>
+            <p>我感谢韩沙上校的坦诚。他向我展示了一种我无法拥有、却必须正视的信仰。</p>
+            <p>但我恳请诸位注意一件事：<strong>韩沙上校刚刚描述的荣耀，没有一条属于他自己。</strong></p>
+            <p>他说的是他父亲的死亡。他说的是三十七万劳工的血汗。他说的是每年数百万报名入伍的年轻人。他说的是那个"可能"出生的儿子。</p>
+            <p>他说的是别人。</p>
+            <p class="speech-highlight">这是所有荣耀话语的共同特征：它永远在要求他人牺牲。</p>
+            <p>我并非苛责韩沙上校个人。我确信他本人随时准备为帝国赴死——这份真诚我毫无怀疑。问题在于：荣耀的逻辑从来不取决于践行者本人的意愿，而取决于聆听者是否接受这份意愿的价值。</p>
+            <p>大明的一位普通汉人母亲，接到儿子的阵亡通知时，她在想什么？</p>
+            <p>她在想：我的儿子是"日月之影"，还是我的儿子再也吃不到我做的腌菜？</p>
+            <p>欧罗巴的一位殖民地士兵，被征召加入印度军团、远赴非洲镇压暴动时，他在想什么？</p>
+            <p>他在想：我是为"文明守护自由"，还是我再也见不到恒河？</p>
+            <p class="speech-highlight">诸位，荣耀是一种无法自证的货币。</p>
+            <p>它说：这枚勋章值一条命。凭什么？因为皇帝说它值。因为将军说它值。因为几千年来大家都说它值。</p>
+            <p>可是，当那个母亲把铁质抚恤勋章别在十二岁孩子的衣领上时，勋章的重量是七克。</p>
+            <p>她失去的，是八十斤——那是她儿子出生时的体重。</p>
+            <p>韩沙上校说：没有荣耀，我父亲就只是南洋海底的一具枯骨。</p>
+            <p>我尊敬这份情感。但我想请问：</p>
+            <p class="speech-highlight"><strong>那具枯骨，可曾同意被转化为荣耀？</strong></p>
+            <p>他没有被询问。阵亡通知抵达时，他已经在海底躺了三周。他已经没有发言权了。</p>
+            <p>荣耀，是一种以死者名义进行的、生者之间的交易。</p>
+            <p>而交易中最大的问题是：<strong>死者永远无法反悔。</strong></p>
+            <div class="speech-break"></div>
+            <p>我并非否定牺牲的价值。</p>
+            <p>在欧罗巴，我们也有牺牲。我的祖父是皇家海军军官，1912年死于北海拦截大明飞艇舰队的战斗。我的父亲是外科医生，在伦敦焚城之夜连续手术七十二小时，最终因感染死于自己救治的伤兵床前。</p>
+            <p>他们死时，我十四岁。</p>
+            <p>我像韩沙上校一样，把他们的死亡理解为某种高于生命的价值。我在牛津读书时，论文写的是"战争伦理与牺牲美学"。我相信人类的文明是在殉道者的骨灰上重建的。</p>
+            <p><strong>直到我去了趟殖民地。</strong></p>
+            <p>那是1927年，我作为联盟预算委员会成员，视察比属刚果。当地官员骄傲地向我展示橡胶园的"增产成果"：过去三年，产量提升217%。我问他怎么做到的。</p>
+            <p>他说：我们把劳工的工作时间从十二小时延长至十六小时，伙食配给减半，并引入大明十三区的管理模式——亲属连坐，逃跑者全家处决。</p>
+            <p>我问他死亡率。</p>
+            <p>他说：<strong>每年38%左右。不过反正他们生育率也高，补得上。</strong></p>
+            <p>他说话时，办公室里挂着一幅油画。画的是"维也纳团结公约"签署场景，拿破仑握着威灵顿的手，背景是晨曦中的欧罗巴地图。画框上刻着一行字：<strong>自由、理性、进步、团结。</strong></p>
+            <p class="speech-highlight">那一刻我问自己：</p>
+            <p class="speech-climax">如果捍卫自由需要以刚果的死亡工厂为代价，我们捍卫的究竟是什么？</p>
+            <p>韩沙上校说，文明与屠场的区别，在于是否有人愿意为那面旗帜赴死。</p>
+            <p>我不同意。</p>
+            <p><strong>文明与屠场的区别，在于那面旗帜是否值得为之赴死。</strong></p>
+            <p>而评判旗帜是否值得的标准，不是它自称承载了多少荣耀，而是它庇护了多少生命——所有生命，不分等级、不分种族、不分帝国与殖民地、不分汉人与十三区。</p>
+            <p>大明的旗帜只庇护汉人。欧罗巴的旗帜只庇护欧洲人。万灵教团的旗帜只庇护共生之子。星辰廷的旗帜只庇护律令之仆。</p>
+            <p>所有旗帜都在宣称自己代表永恒真理，却都在用"非我族类"的血浇灌根基。</p>
+            <p class="speech-highlight">诸位，我老了。我已经五十一岁。我不怕死。</p>
+            <p>但我怕——我怕我的死亡，被转化为某个我从未见过、也永远不会认识的人，用来强迫另一个人去死的理由。</p>
+            <p>这是欧罗巴"新启蒙运动"的核心主张：</p>
+            <p class="speech-climax"><strong>生命是一切价值的尺度，不是反之。</strong></p>
+            <p>并非所有牺牲都通向崇高。大多数牺牲，只是通向下一场牺牲。</p>
+            <p>我们不需要更多的荣耀来粉饰死亡。<br/>我们需要更少的死亡来证明荣耀。</p>
+            <p class="speech-ending">所以我方坚持：<strong>生命重于荣耀。</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二轮：交锋 -->
+      <div class="db-round">
+        <div class="db-round-header">
+          <span class="db-round-num">ROUND 02</span>
+          <h2>第二轮：交锋</h2>
+          <div class="db-round-line"></div>
+          <p class="db-round-desc">双方直接对话，交锋最激烈的核心分歧</p>
+        </div>
+
+        <!-- 韩沙反击 -->
+        <div class="db-speech speech-ming">
+          <div class="speech-header">
+            <div class="speech-avatar"><!-- 同上 --></div>
+            <div class="speech-meta">
+              <span class="speech-name">韩沙·字铁钧</span>
+              <span class="speech-side">正 方</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p>阿什顿议员，您说评判旗帜的标准是它庇护多少生命。</p>
+            <p class="speech-highlight">请问：欧罗巴联盟的旗帜，庇护刚果橡胶园的劳工吗？庇护印度军团阵亡后无人抚恤的廓尔喀士兵吗？庇护伦敦东区买不起配给面包的失业工人吗？</p>
+            <p>您刚刚说，您看见那幅画时，质问自己"捍卫的是什么"。</p>
+            <p>我的问题是：<strong>您质问完之后，辞职了吗？</strong></p>
+            <p>您依然穿着联盟议员的礼服，拿着联盟议员的俸禄，坐在联盟的办公室里，批评联盟的战争政策。</p>
+            <p class="speech-climax">这不叫捍卫生命。这叫消费道德。</p>
+          </div>
+        </div>
+
+        <!-- 阿什顿回应 -->
+        <div class="db-speech speech-europa">
+          <div class="speech-header">
+            <div class="speech-meta">
+              <span class="speech-name">威廉·阿什顿</span>
+              <span class="speech-side">反 方</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p>您说得对。我没有辞职。</p>
+            <p>这是我余生无法洗刷的污点。我每天走进议会时，都能看见刚果河流淌着红色的水——那不是橡胶汁，是血。</p>
+            <p>但我选择留下，是因为：</p>
+            <p class="speech-highlight">如果所有尚有良知的人都离开，这座议会将彻底沦为屠宰场的管理委员会。</p>
+            <p>韩沙上校，您也有女儿。如果有一天，您的女儿问您：父亲，您这辈子为帝国做了什么？</p>
+            <p>您会告诉她，您为帝国杀敌、清剿、镇压？</p>
+            <p>还是您会告诉她，您曾经在隔离营外，听着鲸歌从通风口飘出，而没有下令逮捕那个十三区的少年？</p>
+            <p>我在您的档案里读到过：金山省独立旅，韩沙上校，1925年参与北极光行动，与欧罗巴"净化者"中尉安娜·施密特混编作战。</p>
+            <p class="speech-climax">安娜是我的教女。</p>
+            <p>她死前发回的最后一条电报，不是给她的父母，不是给她的未婚夫，而是给联盟统帅部，要求<strong>"将大明那名侦察上尉的姓名记录在案，此人有合作诚意"</strong>。</p>
+            <p>她到死都在保护敌军的生命。</p>
+            <p>韩沙上校，您活到了今天。您带着安娜用命换回的情报，继续为帝国效力。</p>
+            <p class="speech-highlight">您活下来，不是因为荣耀选择了您。<br/>是因为安娜选择了生命。</p>
+          </div>
+        </div>
+
+        <!-- 韩沙回应安娜之事 -->
+        <div class="db-speech speech-ming">
+          <div class="speech-header">
+            <div class="speech-meta">
+              <span class="speech-name">韩沙·字铁钧</span>
+              <span class="speech-side">正 方</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p class="speech-opening">（沉默七秒）</p>
+            <p>……是。</p>
+            <p>我欠安娜·施密特一条命。</p>
+            <p>北极光那夜，她引爆炸药封堵通道时，我距她十七米。我至今记得她回头看我那一眼——不是告别，是确认。</p>
+            <p>确认我拿到资料了。<br/>确认我可以活着回去复命。<br/>确认她的死亡"有用"。</p>
+            <p>阿什顿议员，您知道吗？</p>
+            <p class="speech-highlight">您刚刚恰恰证明了我的论点。</p>
+            <p>安娜中尉为什么引爆炸药？</p>
+            <p>不是因为活着没有价值。恰恰相反——正是因为活着有价值，她必须让更有机会完成任务的人活下去。</p>
+            <p>那一刻，她用自己的生命，换取了帝国与联盟共享的那份情报。</p>
+            <p>那情报后来救了至少三千人。大明两千一百人，欧罗巴九百人——包括您教女的未婚夫，他在次年东线战役中被靖神卫戍军俘虏，因"北极光贡献者亲属"身份获得优待交换，活着回到了不列颠。</p>
+            <p class="speech-climax">阿什顿议员，您告诉我，安娜的死，是"对生命的尊重"，还是"对荣耀的践行"？</p>
+            <p>她用自己的死亡，兑换了三千条生命。</p>
+            <p class="speech-highlight">这是人类文明的最高算术。</p>
+          </div>
+        </div>
+
+        <!-- 阿什顿最终回应 -->
+        <div class="db-speech speech-europa">
+          <div class="speech-header">
+            <div class="speech-meta">
+              <span class="speech-name">威廉·阿什顿</span>
+              <span class="speech-side">反 方</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p class="speech-opening">（摘眼镜，擦拭）</p>
+            <p>……谢谢您告诉我这些。关于约翰——安娜的未婚夫——我们从未知道他被俘的具体细节。</p>
+            <p class="speech-opening">（重新戴上眼镜）</p>
+            <p>但韩沙上校，您是否想过：</p>
+            <p class="speech-highlight">安娜本不必做这道算术。</p>
+            <p>大明和欧罗巴，本不必在北极圈里互相杀戮，然后由安娜用自己的命来"兑换"战果。</p>
+            <p>这三千条生命的"利润"，是建立在我们两家本不该产生的"成本"之上的。</p>
+            <p>您说安娜的死亡兑换了三千条生命。</p>
+            <p class="speech-climax">我说安娜的死亡，恰恰证明了我们两个文明共同破产。</p>
+          </div>
+        </div>
+
+        <!-- 韩沙回应"文明破产" -->
+        <div class="db-speech speech-ming">
+          <div class="speech-header">
+            <div class="speech-meta">
+              <span class="speech-name">韩沙·字铁钧</span>
+              <span class="speech-side">正 方</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p>文明破产？</p>
+            <p>阿什顿议员，文明从来都是负债经营。</p>
+            <p>罗马的元老院知道自己在负债。大英帝国的东印度公司知道自己在负债。我大明的太祖皇帝在煤山接住那道天启时，大明已经是负资产——亡国之君、残兵败将、半壁江山。</p>
+            <p class="speech-highlight">我们用三百年的血税，把负债做成了资产。</p>
+            <p>您说安娜的死亡是"本不必产生"的成本。</p>
+            <p>可安娜自己选择支付这笔成本。</p>
+            <p>她不是受害者。她是纳税人。</p>
+            <p>她向文明缴纳了她能缴纳的最高税额。</p>
+            <p class="speech-ending">这不是破产。这是投资。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三轮：结辩 -->
+      <div class="db-round">
+        <div class="db-round-header">
+          <span class="db-round-num">ROUND 03</span>
+          <h2>第三轮：结辩</h2>
+          <div class="db-round-line"></div>
+        </div>
+
+        <!-- 阿什顿结辩 -->
+        <div class="db-speech speech-europa speech-final">
+          <div class="speech-header">
+            <div class="speech-meta">
+              <span class="speech-name">威廉·阿什顿</span>
+              <span class="speech-side">反 方 · 结辩</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p>韩沙上校，辩论至此，我已无法说服您，正如您无法说服我。</p>
+            <p>不是因为我们逻辑不通，而是因为我们站在同一个深渊的两岸，共用同一种语法，却赋予了同一个词完全相反的定义。</p>
+            <p class="speech-highlight">在您的词典里，"荣耀"是生命向文明缴纳的税。<br/>在我的词典里，"荣耀"是文明向生命支付的利息。</p>
+            <p>您认为生命需要文明赋予意义，否则只是生物学现象。<br/>我认为文明需要生命作为前提，否则只是墓志铭合集。</p>
+            <p>我们谁也无法证明对方是错的，因为我们无法证明"意义"和"存在"哪个更优先。</p>
+            <p>这是哲学问题，不是军事问题，也不是政治问题。</p>
+            <p>但我请求您，韩沙上校——作为一名欠着我教女一条命的人，作为一名父亲，作为一个人——</p>
+            <p class="speech-climax">请您在下次奔赴荣耀之前，想一想那个十三区的少年。</p>
+            <p>想一想他在检修通道里听鲸歌时，心里想的是什么。</p>
+            <p>他想的不是帝国。不是日月。不是汉夷之辨。</p>
+            <p class="speech-highlight">他想的是海。是他没见过、却从父亲口中听过的、蓝色的、会哭会笑的海。</p>
+            <p>生命所求，不过是一片属于自己的海。</p>
+            <p class="speech-ending">荣耀若不许人见海，便不是荣耀，只是囚笼。</p>
+          </div>
+        </div>
+
+        <!-- 韩沙结辩 -->
+        <div class="db-speech speech-ming speech-final">
+          <div class="speech-header">
+            <div class="speech-meta">
+              <span class="speech-name">韩沙·字铁钧</span>
+              <span class="speech-side">正 方 · 结辩</span>
+            </div>
+          </div>
+          <div class="speech-body">
+            <p class="speech-opening"><strong>（起身，立正，向阿什顿敬帝国军礼）</strong></p>
+            <p>阿什顿议员。</p>
+            <p>安娜中尉的未婚夫约翰，被俘期间表现英勇，没有泄露任何联盟军事情报。靖神卫戍军审讯官在报告末尾写道："此人品格坚毅，有古罗马武士遗风，宜留其性命，以彰帝国气度。"</p>
+            <p>这份报告是我签的字。</p>
+            <p>因为那晚北极光下，安娜中尉回头看我那一眼——她不是在看一个敌人，她是在看一个人。</p>
+            <p>那一刻，她赋予我的，不是荣耀，是<strong>"人类"这个共同的身份。</strong></p>
+            <p>我签下"留其性命"时，不是作为帝国军官，是作为被安娜中尉从"敌人"还原为"人类"的那个人。</p>
+            <p class="speech-opening">（停顿）</p>
+            <p>阿什顿议员，您说十三区的少年想的是海。</p>
+            <p>我见过那个少年。</p>
+            <p>他死在龙江造船厂的蒸汽管道爆裂事故里。事故调查报告写的是"违规操作致死"，抚恤金是三十斤粗粮，由他的工友代领，因为他没有亲属。</p>
+            <p>他是以"无亲属者"的身份死去的。</p>
+            <p>帝国没有为他哀悼，没有为他追勋，没有为他立碑。</p>
+            <p>但是阿什顿议员——</p>
+            <p class="speech-climax">他死前改的那把吹风筒，至今还在龙江造船厂的某个检修通道里。</p>
+            <p>这十七年，至少有四代工人用过它。</p>
+            <p>他们不知道这把铜管是谁改的，不知道为什么要在这里刻一条鱼的图案，不知道为什么吹风筒鸣响时——不是刺耳的蒸汽啸叫——是某种低沉悠长的、<strong>像海的声音</strong>。</p>
+            <p>但他们记住了那个声音。</p>
+            <p class="speech-highlight">这不是荣耀。这是比荣耀更古老的东西。</p>
+            <p>我依然坚持：文明需要荣耀来赋予牺牲以意义。</p>
+            <p>但我也承认：</p>
+            <p class="speech-climax" style="font-size:20px; margin-top:32px;">荣耀不是文明的终点。</p>
+            <p class="speech-ending" style="font-size:18px;">那个少年、那把吹风筒、那片从未见过的海——<br/><strong>这些，才是。</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 结局 -->
+      <div class="db-ending">
+        <div class="db-ending-inner">
+          <div class="dbe-silence">
+            <span class="dbe-label">全场静默</span>
+            <span class="dbe-duration">持续十一秒</span>
+          </div>
+          <div class="dbe-result">
+            <span class="dbe-tag">RESULT</span>
+            <span class="dbe-text">辩论结束，未分胜负。</span>
+          </div>
+          <div class="dbe-footer">
+            <p>——日内瓦，新历273年霜月十五日，第七调解厅。</p>
+            <p>记录员：欧罗巴联盟总秘书处翻译科 二等秘书 艾琳娜·沃特森</p>
+            <p class="dbe-note">（本记录为内部参考，未经双方代表签字确认，不构成任何正式协议）</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 后记/解读 -->
+      <div class="db-afterword">
+        <h3>后记：深渊两岸</h3>
+        <div class="dba-content">
+          <p>这场辩论没有胜负。正如阿什顿议员所言，他们"站在同一个深渊的两岸，共用同一种语法，却赋予了同一个词完全相反的定义"。</p>
+          <div class="dba-cols">
+            <div class="dba-col">
+              <h4>韩沙的世界</h4>
+              <p>荣耀是文明存续的燃料。没有荣耀，牺牲只是浪费。个人的生命是有限的，但当它以荣耀的形式被铭记，它就超越了生物学，成为文明本身的一部分。</p>
+              <p>他最终承认"荣耀不是文明的终点"——这是他作为一个人，而非帝国军官，最真实的告白。</p>
+            </div>
+            <div class="dba-col">
+              <h4>阿什顿的世界</h4>
+              <p>生命是价值的唯一尺度。任何以"更高理想"为名要求牺牲的体系，都必须接受最严格的审视。荣耀若不能服务于生命，就只是另一种形式的暴政。</p>
+              <p>但他选择留在议会"防止它彻底沦为屠宰场管理委员会"——这本身也是一种以个人代价换取改变的"牺牲"。</p>
+            </div>
+          </div>
+          <p class="dba-closing">而在这一切之上，那个十三区少年刻在铜管上的鱼，和那把吹风筒发出的、像海的声音——也许才是这场辩论唯一真正的答案。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer id="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><a href="index.html">焚烬纪元</a></div>
+      <div class="footer-tagline">神弃时代 · 五大阵营全景</div>
+      <div class="footer-links">
+        <a href="index.html">返回首页</a>
+        <a href="#debate-hero">回到顶部</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/story.js"></script>
+</body>
+</html>
